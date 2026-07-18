@@ -1,0 +1,19 @@
+# backend/requirements.txt
+# Phase 3-5 core backend dependencies
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+pydantic>=2.7,<3
+pydantic-settings>=2.3,<3
+pymongo>=4.8,<5
+python-dotenv>=1.0,<2
+structlog>=24.2,<25
+rich>=13.7,<14
+pytest>=8.2,<9
+pytest-asyncio>=0.23,<1
+httpx2>=0.28,<1
+
+# RAG Copilot dependencies (Phase RAG-1 onwards)
+qdrant-client>=1.10,<2
+neo4j>=5.20,<6
+httpx>=0.27,<1
+tenacity>=8.3,<10
