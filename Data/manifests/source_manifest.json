@@ -1,0 +1,73 @@
+{
+  "manifest_version": "1.0",
+  "project": "Pragyan Plant Intelligence",
+  "scope": "Phase 1 locked prototype corpus",
+  "sources": [
+    {
+      "source_id": "pid-001-reactor",
+      "drawing_id": "PCP-PID-001",
+      "path": "Data/P&IDs/Refractor unit.png",
+      "document_type": "pid_image",
+      "sha256": "872EF3EC3CA730C29BA240D4CDDB26DC5677B9DF57AE1EF9A97F1E48E5BC405A",
+      "bytes": 4075872,
+      "dimensions": { "width": 2760, "height": 1504 },
+      "extraction_state": "registry_seeded",
+      "immutable": true
+    },
+    {
+      "source_id": "pid-002-distillation",
+      "drawing_id": "PCP-PID-002",
+      "path": "Data/P&IDs/Distilation_Seperation unit.png",
+      "document_type": "pid_image",
+      "sha256": "E839685B8452A86AF00BCB9908ADD547F2C8472857A15BD6DF09469F55339EED",
+      "bytes": 3505952,
+      "dimensions": { "width": 2816, "height": 1536 },
+      "extraction_state": "registry_seeded",
+      "immutable": true
+    },
+    {
+      "source_id": "pid-003-storage",
+      "drawing_id": "PCP-PID-003",
+      "path": "Data/P&IDs/Storage and tank farm.png",
+      "document_type": "pid_image",
+      "sha256": "572A30DD2DFC878BE481B1DEAB737081DE92341DBF3327164BD5BEB79D33854B",
+      "bytes": 3520945,
+      "dimensions": { "width": 2816, "height": 1536 },
+      "extraction_state": "registry_seeded",
+      "immutable": true
+    },
+    {
+      "source_id": "pid-004-boiler",
+      "drawing_id": "PCP-PID-004",
+      "path": "Data/P&IDs/Utilities_boiler_house.png",
+      "document_type": "pid_image",
+      "sha256": "E9A1CAB721C3D82ABCD5E15965F566F79CD3F6D592ED857BC5C08513BC6DE779",
+      "bytes": 3690040,
+      "dimensions": { "width": 2760, "height": 1504 },
+      "extraction_state": "registry_seeded",
+      "immutable": true
+    },
+    {
+      "source_id": "pid-005-etp",
+      "drawing_id": "PCP-PID-005",
+      "path": "Data/P&IDs/Effluent treatment plant.png",
+      "document_type": "pid_image",
+      "sha256": "21B1ABE8D09FDA55F140EC54A61CE0CD10B1668491BFDF4A766C9A9F5BECBB02",
+      "bytes": 3512691,
+      "dimensions": { "width": 2752, "height": 1536 },
+      "extraction_state": "registry_seeded",
+      "immutable": true
+    },
+    {
+      "source_id": "work-orders-001",
+      "path": "Data/Maintenance Records  Work Orders/Maintenance Records  Work Orders.pdf",
+      "document_type": "scanned_work_order_pdf",
+      "sha256": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "bytes": 1787217,
+      "page_count": 5,
+      "text_layer": "empty",
+      "extraction_state": "pending_ocr",
+      "immutable": true
+    }
+  ]
+}

@@ -1,0 +1,880 @@
+{
+  "source_page": 4,
+  "rendered_image": "page_images/page-004.png",
+  "render_scale": 2.0,
+  "raw_text": "alarm (spec: <10 sec). PASS. Note: This is a safety-critical interlock per compliance\nrequirement \u2014 test must be logged and retained for CPCB audit trail. Performed By:\nVikram Singh, witnessed by D. Rao Status: Closed \u2014 Compliant\nWO-2024-0191\nDate: 05-Jul-2024 Equipment: P-601 (Effluent Transfer Pump) Seal leak observed during\nroutine walkdown (minor weep, non-hazardous per MSDS review of effluent stream).\nMechanical seal replaced as precaution. Parts: Mechanical seal kit Technician: R. Kulkarni\nDowntime: 2 hrs Status: Closed\nWO-2024-0198\nDate: 14-Jul-2024 Equipment: AGT-201 (Reactor Agitator Motor) Reported By: A. Verma,\nProcess Engineer Symptom: Unusual motor hum, slight increase in current draw (batch\n244 onward). Action: Motor bearing greased per schedule (was slightly overdue). Vibration\ncheck performed post-service \u2014 within normal range. Monitoring continued for next 3\nbatches to confirm resolution. Technician: M. Joshi Downtime: O hrs (serviced during\nplanned batch changeover window) Status: Closed \u2014 Monitoring\nWO-2024-0205\nDate: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014\nTIC-301 requiring higher steam flow than historical baseline to maintain column bottoms\ntemperature, suggesting possible fouling on tube side. Action: Scheduled for chemical\ncleaning at next planned shutdown (added to turnaround scope TA-2024-Q3). Interim: TV-\n301 setpoint adjusted to compensate. Technician: S. Patil / Engineering Review: A. Verma\nStatus: Open \u2014 Deferred to Turnaround\nWO-2024-0212\nDate: 03-Aug-2024 Equip Tag: HS-101 / P-101 Hand switch (HOA) for Feed Pump A found\nin \"OFF\" position unexpectedly during shift changeover \u2014 cause unclear, possibly\ninadvertent operation during nearby work. No process impact (P-102 was running). Switch\nfunction tested normal, no fault found. Logged as anomaly for awareness. Reported By: R.\nIyer Status: Closed \u2014 No Fault Found (NFF)",
+  "regions": [
+    {
+      "region_id": "p004-r001",
+      "text": "alarm (spec: <10 sec). PASS. Note: This is a safety-critical interlock per compliance",
+      "confidence": 0.990978,
+      "polygon": [
+        [
+          70,
+          43
+        ],
+        [
+          989,
+          43
+        ],
+        [
+          989,
+          69
+        ],
+        [
+          70,
+          69
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 43,
+        "width": 919,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r002",
+      "text": "requirement \u2014 test must be logged and retained for CPCB audit trail. Performed By:",
+      "confidence": 0.99979,
+      "polygon": [
+        [
+          68,
+          78
+        ],
+        [
+          1011,
+          77
+        ],
+        [
+          1011,
+          105
+        ],
+        [
+          68,
+          106
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 77,
+        "width": 943,
+        "height": 29
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r003",
+      "text": "Vikram Singh, witnessed by D. Rao Status: Closed \u2014 Compliant",
+      "confidence": 0.984772,
+      "polygon": [
+        [
+          71,
+          117
+        ],
+        [
+          786,
+          117
+        ],
+        [
+          786,
+          141
+        ],
+        [
+          71,
+          141
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 117,
+        "width": 715,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r004",
+      "text": "WO-2024-0191",
+      "confidence": 0.999302,
+      "polygon": [
+        [
+          70,
+          237
+        ],
+        [
+          247,
+          237
+        ],
+        [
+          247,
+          260
+        ],
+        [
+          70,
+          260
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 237,
+        "width": 177,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r005",
+      "text": "Date: 05-Jul-2024 Equipment: P-601 (Effluent Transfer Pump) Seal leak observed during",
+      "confidence": 0.995809,
+      "polygon": [
+        [
+          66,
+          282
+        ],
+        [
+          1071,
+          283
+        ],
+        [
+          1071,
+          313
+        ],
+        [
+          66,
+          312
+        ]
+      ],
+      "bounding_box": {
+        "x": 66,
+        "y": 282,
+        "width": 1005,
+        "height": 31
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r006",
+      "text": "routine walkdown (minor weep, non-hazardous per MSDS review of effluent stream).",
+      "confidence": 0.993341,
+      "polygon": [
+        [
+          70,
+          322
+        ],
+        [
+          1024,
+          322
+        ],
+        [
+          1024,
+          346
+        ],
+        [
+          70,
+          346
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 322,
+        "width": 954,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r007",
+      "text": "Mechanical seal replaced as precaution. Parts: Mechanical seal kit Technician: R. Kulkarni",
+      "confidence": 0.999857,
+      "polygon": [
+        [
+          69,
+          356
+        ],
+        [
+          1083,
+          356
+        ],
+        [
+          1083,
+          383
+        ],
+        [
+          69,
+          383
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 356,
+        "width": 1014,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r008",
+      "text": "Downtime: 2 hrs Status: Closed",
+      "confidence": 0.977882,
+      "polygon": [
+        [
+          70,
+          394
+        ],
+        [
+          430,
+          394
+        ],
+        [
+          430,
+          417
+        ],
+        [
+          70,
+          417
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 394,
+        "width": 360,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r009",
+      "text": "WO-2024-0198",
+      "confidence": 0.999641,
+      "polygon": [
+        [
+          69,
+          513
+        ],
+        [
+          251,
+          513
+        ],
+        [
+          251,
+          540
+        ],
+        [
+          69,
+          540
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 513,
+        "width": 182,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r010",
+      "text": "Date: 14-Jul-2024 Equipment: AGT-201 (Reactor Agitator Motor) Reported By: A. Verma,",
+      "confidence": 0.998153,
+      "polygon": [
+        [
+          69,
+          562
+        ],
+        [
+          1069,
+          562
+        ],
+        [
+          1069,
+          589
+        ],
+        [
+          69,
+          589
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 562,
+        "width": 1000,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r011",
+      "text": "Process Engineer Symptom: Unusual motor hum, slight increase in current draw (batch",
+      "confidence": 0.995765,
+      "polygon": [
+        [
+          70,
+          599
+        ],
+        [
+          1048,
+          599
+        ],
+        [
+          1048,
+          623
+        ],
+        [
+          70,
+          623
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 599,
+        "width": 978,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r012",
+      "text": "244 onward). Action: Motor bearing greased per schedule (was slightly overdue). Vibration",
+      "confidence": 0.995299,
+      "polygon": [
+        [
+          70,
+          635
+        ],
+        [
+          1089,
+          635
+        ],
+        [
+          1089,
+          661
+        ],
+        [
+          70,
+          661
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 635,
+        "width": 1019,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r013",
+      "text": "check performed post-service \u2014 within normal range. Monitoring continued for next 3",
+      "confidence": 0.997369,
+      "polygon": [
+        [
+          71,
+          671
+        ],
+        [
+          1037,
+          671
+        ],
+        [
+          1037,
+          695
+        ],
+        [
+          71,
+          695
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 671,
+        "width": 966,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r014",
+      "text": "batches to confirm resolution. Technician: M. Joshi Downtime: O hrs (serviced during",
+      "confidence": 0.994456,
+      "polygon": [
+        [
+          69,
+          707
+        ],
+        [
+          1033,
+          707
+        ],
+        [
+          1033,
+          734
+        ],
+        [
+          69,
+          734
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 707,
+        "width": 964,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r015",
+      "text": "planned batch changeover window) Status: Closed \u2014 Monitoring",
+      "confidence": 0.994312,
+      "polygon": [
+        [
+          68,
+          741
+        ],
+        [
+          808,
+          742
+        ],
+        [
+          808,
+          771
+        ],
+        [
+          68,
+          770
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 741,
+        "width": 740,
+        "height": 30
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r016",
+      "text": "WO-2024-0205",
+      "confidence": 0.999461,
+      "polygon": [
+        [
+          69,
+          864
+        ],
+        [
+          252,
+          864
+        ],
+        [
+          252,
+          888
+        ],
+        [
+          69,
+          888
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 864,
+        "width": 183,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r017",
+      "text": "Date: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014",
+      "confidence": 0.996313,
+      "polygon": [
+        [
+          69,
+          912
+        ],
+        [
+          1087,
+          912
+        ],
+        [
+          1087,
+          939
+        ],
+        [
+          69,
+          939
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 912,
+        "width": 1018,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r018",
+      "text": "TIC-301 requiring higher steam flow than historical baseline to maintain column bottoms",
+      "confidence": 0.99765,
+      "polygon": [
+        [
+          71,
+          949
+        ],
+        [
+          1069,
+          949
+        ],
+        [
+          1069,
+          973
+        ],
+        [
+          71,
+          973
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 949,
+        "width": 998,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r019",
+      "text": "temperature, suggesting possible fouling on tube side. Action: Scheduled for chemical",
+      "confidence": 0.997554,
+      "polygon": [
+        [
+          70,
+          985
+        ],
+        [
+          1037,
+          985
+        ],
+        [
+          1037,
+          1012
+        ],
+        [
+          70,
+          1012
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 985,
+        "width": 967,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r020",
+      "text": "cleaning at next planned shutdown (added to turnaround scope TA-2024-Q3). Interim: TV-",
+      "confidence": 0.999107,
+      "polygon": [
+        [
+          71,
+          1021
+        ],
+        [
+          1079,
+          1021
+        ],
+        [
+          1079,
+          1044
+        ],
+        [
+          71,
+          1044
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 1021,
+        "width": 1008,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r021",
+      "text": "301 setpoint adjusted to compensate. Technician: S. Patil / Engineering Review: A. Verma",
+      "confidence": 0.990736,
+      "polygon": [
+        [
+          71,
+          1058
+        ],
+        [
+          1068,
+          1058
+        ],
+        [
+          1068,
+          1082
+        ],
+        [
+          71,
+          1082
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 1058,
+        "width": 997,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r022",
+      "text": "Status: Open \u2014 Deferred to Turnaround",
+      "confidence": 0.975035,
+      "polygon": [
+        [
+          70,
+          1094
+        ],
+        [
+          525,
+          1094
+        ],
+        [
+          525,
+          1118
+        ],
+        [
+          70,
+          1118
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1094,
+        "width": 455,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r023",
+      "text": "WO-2024-0212",
+      "confidence": 0.999487,
+      "polygon": [
+        [
+          69,
+          1213
+        ],
+        [
+          249,
+          1213
+        ],
+        [
+          249,
+          1239
+        ],
+        [
+          69,
+          1239
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1213,
+        "width": 180,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r024",
+      "text": "Date: 03-Aug-2024 Equip Tag: HS-101 / P-101 Hand switch (HOA) for Feed Pump A found",
+      "confidence": 0.986084,
+      "polygon": [
+        [
+          68,
+          1262
+        ],
+        [
+          1070,
+          1261
+        ],
+        [
+          1070,
+          1288
+        ],
+        [
+          68,
+          1289
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1261,
+        "width": 1002,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r025",
+      "text": "in \"OFF\" position unexpectedly during shift changeover \u2014 cause unclear, possibly",
+      "confidence": 0.988201,
+      "polygon": [
+        [
+          69,
+          1299
+        ],
+        [
+          988,
+          1299
+        ],
+        [
+          988,
+          1326
+        ],
+        [
+          69,
+          1326
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1299,
+        "width": 919,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r026",
+      "text": "inadvertent operation during nearby work. No process impact (P-102 was running). Switch",
+      "confidence": 0.98627,
+      "polygon": [
+        [
+          68,
+          1335
+        ],
+        [
+          1081,
+          1334
+        ],
+        [
+          1081,
+          1360
+        ],
+        [
+          68,
+          1361
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1334,
+        "width": 1013,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r027",
+      "text": "function tested normal, no fault found. Logged as anomaly for awareness. Reported By: R.",
+      "confidence": 0.991577,
+      "polygon": [
+        [
+          68,
+          1369
+        ],
+        [
+          1072,
+          1370
+        ],
+        [
+          1072,
+          1397
+        ],
+        [
+          68,
+          1396
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1369,
+        "width": 1004,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p004-r028",
+      "text": "Iyer Status: Closed \u2014 No Fault Found (NFF)",
+      "confidence": 0.990658,
+      "polygon": [
+        [
+          68,
+          1407
+        ],
+        [
+          568,
+          1406
+        ],
+        [
+          568,
+          1433
+        ],
+        [
+          68,
+          1434
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1406,
+        "width": 500,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    }
+  ],
+  "region_count": 28,
+  "mean_confidence": 0.993388,
+  "duration_ms": 100091.03,
+  "review_state": "pending_review"
+}

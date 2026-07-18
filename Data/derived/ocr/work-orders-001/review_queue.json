@@ -1,0 +1,1686 @@
+{
+  "queue_id": "review-ocr-C7B4C6A1D0EDBD82-d45abc3ee34655eb",
+  "source_job_id": "ocr-C7B4C6A1D0EDBD82-d45abc3ee34655eb",
+  "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+  "generated_at": "2026-07-14T19:24:34.658697+00:00",
+  "state": "pending_review",
+  "policy": "A reviewer decision is required before any field or asset link becomes verified evidence.",
+  "task_count": 98,
+  "tasks": [
+    {
+      "task_id": "ocr-page-001",
+      "task_type": "ocr_page_review",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_artifact": "pages/page-001.json",
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify_transcript",
+        "correct_transcript",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-page-002",
+      "task_type": "ocr_page_review",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_artifact": "pages/page-002.json",
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify_transcript",
+        "correct_transcript",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-page-003",
+      "task_type": "ocr_page_review",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_artifact": "pages/page-003.json",
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify_transcript",
+        "correct_transcript",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-page-004",
+      "task_type": "ocr_page_review",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_artifact": "pages/page-004.json",
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify_transcript",
+        "correct_transcript",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-page-005",
+      "task_type": "ocr_page_review",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_artifact": "pages/page-005.json",
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify_transcript",
+        "correct_transcript",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-001",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0113",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r007",
+      "source_text": "WO-2024-0113",
+      "confidence": 0.999455,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-002",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "14-Mar-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r008",
+      "source_text": "Date: 14-Mar-2024 Equipment: R-201 (Reactor) Reported By: Ramesh Iyer, Shift Engineer",
+      "confidence": 0.998855,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-005",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0114",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r014",
+      "source_text": "WO-2024-0114",
+      "confidence": 0.999436,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-006",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "15-Mar-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r015",
+      "source_text": "Date: 15-Mar-2024 Equipment: P-101 Reported: Feed Pump A tripping intermittently on",
+      "confidence": 0.995938,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-012",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0119",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r022",
+      "source_text": "WO-2024-0119",
+      "confidence": 0.998642,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-013",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "22-Mar-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r023",
+      "source_text": "Date: 22-Mar-2024 Equip Tag: PSV-201 Type: Scheduled Test Description: Annual pop-",
+      "confidence": 0.995261,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-015",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0122",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r027",
+      "source_text": "WO-2024-0122",
+      "confidence": 0.998426,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-016",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "O2-Apr-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r028",
+      "source_text": "Date: O2-Apr-2024 Equipment: C-301 / Distillation Column Complaint: Operators reported",
+      "confidence": 0.986829,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-019",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0087",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r005",
+      "source_text": "turnaround \u2014 drift trend observed over last 3 work orders (see WO-2024-0087, WO-2024-",
+      "confidence": 0.996908,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-020",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0128",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r007",
+      "source_text": "WO-2024-0128",
+      "confidence": 0.99969,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-021",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "09-Apr-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r008",
+      "source_text": "Date: 09-Apr-2024 Equipment: LV-301 (bottoms level control valve, C-301) Sticking",
+      "confidence": 0.996188,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-023",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0134",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r012",
+      "source_text": "WO-2024-0134",
+      "confidence": 0.999677,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-024",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "18-Apr-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r013",
+      "source_text": "Date: 18-Apr-2024 Equipment: V-401 (Raw Material Storage Tank) Reported By: D. Rao,",
+      "confidence": 0.99267,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-026",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0140",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r018",
+      "source_text": "WO-2024-0140",
+      "confidence": 0.999725,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-027",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "27-Apr-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r019",
+      "source_text": "Date: 27-Apr-2024 Equipment Tag: XV-401 Fault: Valve handwheel stiff, difficult to",
+      "confidence": 0.998305,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-030",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0151",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r023",
+      "source_text": "WO-2024-0151",
+      "confidence": 0.999807,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-031",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "09-May-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r024",
+      "source_text": "Date: 09-May-2024 Equip: P-401 Transfer Pump Unusual vibration noted during routine",
+      "confidence": 0.994085,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-033",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0158",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r001",
+      "source_text": "WO-2024-0158",
+      "confidence": 0.999814,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-034",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "21-May-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r002",
+      "source_text": "Date: 21-May-2024 Equipment: B-501 (Steam Boiler) Priority: HIGH Reported By: Ramesh",
+      "confidence": 0.995236,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-037",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0163",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r012",
+      "source_text": "WO-2024-0163",
+      "confidence": 0.999801,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-038",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "30-May-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r013",
+      "source_text": "Date: 30-May-2024 Tag: PSV-501 Annual relief valve test. Set pressure verified within spec",
+      "confidence": 0.990679,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-040",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0170",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r015",
+      "source_text": "WO-2024-0170",
+      "confidence": 0.999752,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-041",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "O8-Jun-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r016",
+      "source_text": "Date: O8-Jun-2024 Equipment: FV-501 (fuel control valve, Boiler House) Complaint: FIC-",
+      "confidence": 0.981257,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-042",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0177",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r022",
+      "source_text": "WO-2024-0177",
+      "confidence": 0.999734,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-043",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "19-Jun-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r023",
+      "source_text": "Date: 19-Jun-2024 Equip: ETP-601 Routine \u2014 chemical dosing pump for treatment tank",
+      "confidence": 0.998946,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-046",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0183",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r027",
+      "source_text": "WO-2024-0183",
+      "confidence": 0.999918,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-047",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "27-Jun-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r028",
+      "source_text": "Date: 27-Jun-2024 Equipment: XV-603 (ETP discharge auto-close valve) Priority: HIGH \u2014",
+      "confidence": 0.980743,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-051",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0191",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r004",
+      "source_text": "WO-2024-0191",
+      "confidence": 0.999302,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-052",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "05-Jul-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r005",
+      "source_text": "Date: 05-Jul-2024 Equipment: P-601 (Effluent Transfer Pump) Seal leak observed during",
+      "confidence": 0.995809,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-054",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0198",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r009",
+      "source_text": "WO-2024-0198",
+      "confidence": 0.999641,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-055",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "14-Jul-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r010",
+      "source_text": "Date: 14-Jul-2024 Equipment: AGT-201 (Reactor Agitator Motor) Reported By: A. Verma,",
+      "confidence": 0.998153,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-056",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0205",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r016",
+      "source_text": "WO-2024-0205",
+      "confidence": 0.999461,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-057",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "25-Jul-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "source_text": "Date: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014",
+      "confidence": 0.996313,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-061",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0212",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r023",
+      "source_text": "WO-2024-0212",
+      "confidence": 0.999487,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-062",
+      "task_type": "ocr_field_review",
+      "field": "date_raw",
+      "proposed_value": "03-Aug-2024",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r024",
+      "source_text": "Date: 03-Aug-2024 Equip Tag: HS-101 / P-101 Hand switch (HOA) for Feed Pump A found",
+      "confidence": 0.986084,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-084",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0151",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-085",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0205",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-088",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0119",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r008",
+      "source_text": "Safety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-",
+      "confidence": 0.987773,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "ocr-field-089",
+      "task_type": "ocr_field_review",
+      "field": "work_order_id",
+      "proposed_value": "WO-2024-0163",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r008",
+      "source_text": "Safety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-",
+      "confidence": 0.987773,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "verify",
+        "correct",
+        "reject",
+        "mark_unreadable"
+      ]
+    },
+    {
+      "task_id": "asset-link-001",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "R-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r008",
+      "confidence": 0.998855,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-002",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "TIC-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r009",
+      "confidence": 0.990261,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-003",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r015",
+      "confidence": 0.995938,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-004",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-102",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r017",
+      "confidence": 0.999107,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-005",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r018",
+      "confidence": 0.999282,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-006",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r020",
+      "confidence": 0.995257,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-007",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-102",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r021",
+      "confidence": 0.997417,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-008",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PSV-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r023",
+      "confidence": 0.995261,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-009",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "C-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r028",
+      "confidence": 0.986829,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-010",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PIC-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 1,
+      "source_region_id": "p001-r029",
+      "confidence": 0.997672,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-011",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "C-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r008",
+      "confidence": 0.996188,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-012",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "V-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r013",
+      "confidence": 0.99267,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-013",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "V-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "confidence": 0.999676,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-014",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "confidence": 0.999676,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-015",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 2,
+      "source_region_id": "p002-r024",
+      "confidence": 0.994085,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-016",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "B-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r002",
+      "confidence": 0.995236,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-017",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "LIC-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r003",
+      "confidence": 0.992648,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-018",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PSV-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r013",
+      "confidence": 0.990679,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-019",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "ETP-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r023",
+      "confidence": 0.998946,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-020",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "AIT-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r025",
+      "confidence": 0.995509,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-021",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "XV-603",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r028",
+      "confidence": 0.980743,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-022",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "AAH-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r029",
+      "confidence": 0.996876,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-023",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "XV-603",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 3,
+      "source_region_id": "p003-r030",
+      "confidence": 0.990488,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-024",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r005",
+      "confidence": 0.995809,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-025",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "C-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "confidence": 0.996313,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-026",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "E-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "confidence": 0.996313,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-027",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "TIC-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r018",
+      "confidence": 0.99765,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-028",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r024",
+      "confidence": 0.986084,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-029",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-102",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 4,
+      "source_region_id": "p004-r026",
+      "confidence": 0.98627,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-030",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PSV-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-031",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "TIC-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-032",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "R-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-033",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-034",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-102",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-035",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "TIC-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-036",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PIC-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-037",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "C-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-038",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "E-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-039",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "V-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-040",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-041",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "PSV-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-042",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "FIC-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-043",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "LIC-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-044",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "ETP-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-045",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "AAH-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-046",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "XV-603",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-047",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "B-501",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-048",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-601",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-049",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "E-301",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "confidence": 0.986839,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-050",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-401",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "confidence": 0.986839,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-051",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "XV-603",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r009",
+      "confidence": 0.995606,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-052",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "P-101",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r010",
+      "confidence": 0.994053,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-053",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "XV-603",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "confidence": 0.998536,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    },
+    {
+      "task_id": "asset-link-054",
+      "task_type": "asset_link_review",
+      "proposed_asset_tag": "R-201",
+      "source_id": "work-orders-001",
+      "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "confidence": 0.998536,
+      "state": "pending_review",
+      "allowed_decisions": [
+        "approve_link",
+        "correct_tag",
+        "reject_link"
+      ]
+    }
+  ]
+}

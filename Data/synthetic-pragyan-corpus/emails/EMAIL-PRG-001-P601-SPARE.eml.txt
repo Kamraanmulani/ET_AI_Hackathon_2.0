@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-001-P601-SPARE
+title: P-601 Vendor Documentation Follow-Up
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-08-10
+owner_role: Maintenance Planner
+related_asset_tags: [P-601]
+related_drawing_ids: [PCP-PID-005]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: maintenance.planner@pragyan.demo
+To: procurement.coordinator@pragyan.demo
+CC: reliability.engineer@pragyan.demo
+Subject: P-601 vendor-documentation follow-up
+Date: 2025-08-10
+Classification: Internal Demo - Synthetic
+
+Please record the outstanding vendor-documentation request for P-601 in the handover evidence pack. This is a documentation follow-up only; no equipment condition conclusion is requested.
+
+References: INS-PRG-P601-001; SOP-PRG-MNT-002

@@ -1,0 +1,911 @@
+{
+  "source_page": 2,
+  "rendered_image": "page_images/page-002.png",
+  "render_scale": 2.0,
+  "raw_text": "positioner drifting \u2014 output signal not tracking controller demand accurately. Corrective\nAction: Positioner recalibrated, stroke test performed O-100%. Loop tuning parameters\nadjusted (reduced gain from 2.4 to 1.8). Technician: Meena Joshi (Instrumentation)\nDowntime: 1.5 hrs Status: Closed Note: Recommend positioner replacement at next\nturnaround \u2014 drift trend observed over last 3 work orders (see WO-2024-0087, WO-2024-\n0095).\nWO-2024-0128\nDate: 09-Apr-2024 Equipment: LV-301 (bottoms level control valve, C-301) Sticking\nintermittently, level oscillating +/- 8% around setpoint. Stem found partially seized.\nDisassembled, cleaned, re-lubricated stem packing. Functional test OK after rework.\nTechnician: S. Patil Parts: Valve packing kit Downtime: 3 hrs Status: Closed\nWO-2024-0134\nDate: 18-Apr-2024 Equipment: V-401 (Raw Material Storage Tank) Reported By: D. Rao,\nMaintenance Supervisor Issue: Routine inspection flagged minor corrosion on LG-401\ngauge glass fitting. Action: Fitting replaced, gauge glass inspected \u2014 no cracks found. Tank\nremained in service throughout (isolation not required for this repair). Parts: LG-401 fitting\nassembly Technician: R. Kulkarni Downtime: O hrs (no isolation needed) Status: Closed\nWO-2024-0140\nDate: 27-Apr-2024 Equipment Tag: XV-401 Fault: Valve handwheel stiff, difficult to\noperate during V-401 to P-401 transfer sequence. Action: Valve stem lubricated, gland\npacking adjusted. Operability confirmed \u2014 smooth operation restored. Tech: Suresh Patil\nDowntime: 45 min Status: Closed\nWO-2024-0151\nDate: 09-May-2024 Equip: P-401 Transfer Pump Unusual vibration noted during routine\nround by shift operator (A. Verma). Vibration analysis performed \u2014 bearing frequency\nspike detected on DE (drive end) bearing. Trend indicates early wear, not yet critical.\nRecommendation: Schedule bearing replacement at next planned maintenance window\n(within 60 days) \u2014 added to CMMS backlog as PM-2024-0038. Technician: M. Joshi\nStatus: Monitoring / Open",
+  "regions": [
+    {
+      "region_id": "p002-r001",
+      "text": "positioner drifting \u2014 output signal not tracking controller demand accurately. Corrective",
+      "confidence": 0.991459,
+      "polygon": [
+        [
+          68,
+          42
+        ],
+        [
+          1068,
+          41
+        ],
+        [
+          1068,
+          70
+        ],
+        [
+          68,
+          71
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 41,
+        "width": 1000,
+        "height": 30
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r002",
+      "text": "Action: Positioner recalibrated, stroke test performed O-100%. Loop tuning parameters",
+      "confidence": 0.989993,
+      "polygon": [
+        [
+          69,
+          77
+        ],
+        [
+          1044,
+          79
+        ],
+        [
+          1044,
+          106
+        ],
+        [
+          69,
+          104
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 77,
+        "width": 975,
+        "height": 29
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r003",
+      "text": "adjusted (reduced gain from 2.4 to 1.8). Technician: Meena Joshi (Instrumentation)",
+      "confidence": 0.994884,
+      "polygon": [
+        [
+          70,
+          115
+        ],
+        [
+          1003,
+          115
+        ],
+        [
+          1003,
+          142
+        ],
+        [
+          70,
+          142
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 115,
+        "width": 933,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r004",
+      "text": "Downtime: 1.5 hrs Status: Closed Note: Recommend positioner replacement at next",
+      "confidence": 0.993078,
+      "polygon": [
+        [
+          68,
+          149
+        ],
+        [
+          1011,
+          150
+        ],
+        [
+          1011,
+          177
+        ],
+        [
+          68,
+          176
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 149,
+        "width": 943,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r005",
+      "text": "turnaround \u2014 drift trend observed over last 3 work orders (see WO-2024-0087, WO-2024-",
+      "confidence": 0.996908,
+      "polygon": [
+        [
+          70,
+          188
+        ],
+        [
+          1070,
+          188
+        ],
+        [
+          1070,
+          211
+        ],
+        [
+          70,
+          211
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 188,
+        "width": 1000,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r006",
+      "text": "0095).",
+      "confidence": 0.999989,
+      "polygon": [
+        [
+          67,
+          220
+        ],
+        [
+          147,
+          220
+        ],
+        [
+          147,
+          251
+        ],
+        [
+          67,
+          251
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 220,
+        "width": 80,
+        "height": 31
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r007",
+      "text": "WO-2024-0128",
+      "confidence": 0.99969,
+      "polygon": [
+        [
+          70,
+          345
+        ],
+        [
+          249,
+          345
+        ],
+        [
+          249,
+          368
+        ],
+        [
+          70,
+          368
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 345,
+        "width": 179,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r008",
+      "text": "Date: 09-Apr-2024 Equipment: LV-301 (bottoms level control valve, C-301) Sticking",
+      "confidence": 0.996188,
+      "polygon": [
+        [
+          69,
+          393
+        ],
+        [
+          1009,
+          393
+        ],
+        [
+          1009,
+          420
+        ],
+        [
+          69,
+          420
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 393,
+        "width": 940,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r009",
+      "text": "intermittently, level oscillating +/- 8% around setpoint. Stem found partially seized.",
+      "confidence": 0.998376,
+      "polygon": [
+        [
+          69,
+          429
+        ],
+        [
+          1001,
+          429
+        ],
+        [
+          1001,
+          455
+        ],
+        [
+          69,
+          455
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 429,
+        "width": 932,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r010",
+      "text": "Disassembled, cleaned, re-lubricated stem packing. Functional test OK after rework.",
+      "confidence": 0.9954,
+      "polygon": [
+        [
+          70,
+          466
+        ],
+        [
+          1009,
+          466
+        ],
+        [
+          1009,
+          490
+        ],
+        [
+          70,
+          490
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 466,
+        "width": 939,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r011",
+      "text": "Technician: S. Patil Parts: Valve packing kit Downtime: 3 hrs Status: Closed",
+      "confidence": 0.989483,
+      "polygon": [
+        [
+          70,
+          502
+        ],
+        [
+          904,
+          502
+        ],
+        [
+          904,
+          526
+        ],
+        [
+          70,
+          526
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 502,
+        "width": 834,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r012",
+      "text": "WO-2024-0134",
+      "confidence": 0.999677,
+      "polygon": [
+        [
+          70,
+          623
+        ],
+        [
+          251,
+          623
+        ],
+        [
+          251,
+          646
+        ],
+        [
+          70,
+          646
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 623,
+        "width": 181,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r013",
+      "text": "Date: 18-Apr-2024 Equipment: V-401 (Raw Material Storage Tank) Reported By: D. Rao,",
+      "confidence": 0.99267,
+      "polygon": [
+        [
+          69,
+          669
+        ],
+        [
+          1057,
+          669
+        ],
+        [
+          1057,
+          696
+        ],
+        [
+          69,
+          696
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 669,
+        "width": 988,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r014",
+      "text": "Maintenance Supervisor Issue: Routine inspection flagged minor corrosion on LG-401",
+      "confidence": 0.999305,
+      "polygon": [
+        [
+          70,
+          708
+        ],
+        [
+          1036,
+          708
+        ],
+        [
+          1036,
+          732
+        ],
+        [
+          70,
+          732
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 708,
+        "width": 966,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r015",
+      "text": "gauge glass fitting. Action: Fitting replaced, gauge glass inspected \u2014 no cracks found. Tank",
+      "confidence": 0.990718,
+      "polygon": [
+        [
+          69,
+          744
+        ],
+        [
+          1091,
+          741
+        ],
+        [
+          1091,
+          768
+        ],
+        [
+          69,
+          770
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 741,
+        "width": 1022,
+        "height": 29
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r016",
+      "text": "remained in service throughout (isolation not required for this repair). Parts: LG-401 fitting",
+      "confidence": 0.997364,
+      "polygon": [
+        [
+          68,
+          779
+        ],
+        [
+          1090,
+          779
+        ],
+        [
+          1090,
+          806
+        ],
+        [
+          68,
+          806
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 779,
+        "width": 1022,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r017",
+      "text": "assembly Technician: R. Kulkarni Downtime: O hrs (no isolation needed) Status: Closed",
+      "confidence": 0.99941,
+      "polygon": [
+        [
+          70,
+          815
+        ],
+        [
+          1060,
+          815
+        ],
+        [
+          1060,
+          842
+        ],
+        [
+          70,
+          842
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 815,
+        "width": 990,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r018",
+      "text": "WO-2024-0140",
+      "confidence": 0.999725,
+      "polygon": [
+        [
+          70,
+          937
+        ],
+        [
+          251,
+          937
+        ],
+        [
+          251,
+          960
+        ],
+        [
+          70,
+          960
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 937,
+        "width": 181,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r019",
+      "text": "Date: 27-Apr-2024 Equipment Tag: XV-401 Fault: Valve handwheel stiff, difficult to",
+      "confidence": 0.998305,
+      "polygon": [
+        [
+          68,
+          984
+        ],
+        [
+          1007,
+          983
+        ],
+        [
+          1007,
+          1010
+        ],
+        [
+          68,
+          1011
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 983,
+        "width": 939,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r020",
+      "text": "operate during V-401 to P-401 transfer sequence. Action: Valve stem lubricated, gland",
+      "confidence": 0.999676,
+      "polygon": [
+        [
+          69,
+          1021
+        ],
+        [
+          1031,
+          1020
+        ],
+        [
+          1031,
+          1046
+        ],
+        [
+          69,
+          1047
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1020,
+        "width": 962,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r021",
+      "text": "packing adjusted. Operability confirmed \u2014 smooth operation restored. Tech: Suresh Patil",
+      "confidence": 0.995136,
+      "polygon": [
+        [
+          69,
+          1057
+        ],
+        [
+          1069,
+          1055
+        ],
+        [
+          1069,
+          1082
+        ],
+        [
+          69,
+          1084
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1055,
+        "width": 1000,
+        "height": 29
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r022",
+      "text": "Downtime: 45 min Status: Closed",
+      "confidence": 0.994164,
+      "polygon": [
+        [
+          70,
+          1094
+        ],
+        [
+          454,
+          1094
+        ],
+        [
+          454,
+          1117
+        ],
+        [
+          70,
+          1117
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1094,
+        "width": 384,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r023",
+      "text": "WO-2024-0151",
+      "confidence": 0.999807,
+      "polygon": [
+        [
+          69,
+          1213
+        ],
+        [
+          247,
+          1213
+        ],
+        [
+          247,
+          1239
+        ],
+        [
+          69,
+          1239
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1213,
+        "width": 178,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r024",
+      "text": "Date: 09-May-2024 Equip: P-401 Transfer Pump Unusual vibration noted during routine",
+      "confidence": 0.994085,
+      "polygon": [
+        [
+          69,
+          1262
+        ],
+        [
+          1060,
+          1262
+        ],
+        [
+          1060,
+          1289
+        ],
+        [
+          69,
+          1289
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1262,
+        "width": 991,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r025",
+      "text": "round by shift operator (A. Verma). Vibration analysis performed \u2014 bearing frequency",
+      "confidence": 0.989154,
+      "polygon": [
+        [
+          68,
+          1298
+        ],
+        [
+          1038,
+          1299
+        ],
+        [
+          1038,
+          1326
+        ],
+        [
+          68,
+          1325
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1298,
+        "width": 970,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r026",
+      "text": "spike detected on DE (drive end) bearing. Trend indicates early wear, not yet critical.",
+      "confidence": 0.996627,
+      "polygon": [
+        [
+          70,
+          1335
+        ],
+        [
+          1013,
+          1335
+        ],
+        [
+          1013,
+          1361
+        ],
+        [
+          70,
+          1361
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1335,
+        "width": 943,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r027",
+      "text": "Recommendation: Schedule bearing replacement at next planned maintenance window",
+      "confidence": 0.999578,
+      "polygon": [
+        [
+          68,
+          1369
+        ],
+        [
+          1063,
+          1370
+        ],
+        [
+          1063,
+          1397
+        ],
+        [
+          68,
+          1396
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1369,
+        "width": 995,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r028",
+      "text": "(within 60 days) \u2014 added to CMMS backlog as PM-2024-0038. Technician: M. Joshi",
+      "confidence": 0.992105,
+      "polygon": [
+        [
+          72,
+          1408
+        ],
+        [
+          1013,
+          1408
+        ],
+        [
+          1013,
+          1432
+        ],
+        [
+          72,
+          1432
+        ]
+      ],
+      "bounding_box": {
+        "x": 72,
+        "y": 1408,
+        "width": 941,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p002-r029",
+      "text": "Status: Monitoring / Open",
+      "confidence": 0.99091,
+      "polygon": [
+        [
+          69,
+          1441
+        ],
+        [
+          366,
+          1442
+        ],
+        [
+          366,
+          1469
+        ],
+        [
+          68,
+          1468
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 1441,
+        "width": 298,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    }
+  ],
+  "region_count": 29,
+  "mean_confidence": 0.99565,
+  "duration_ms": 74323.12,
+  "review_state": "pending_review"
+}

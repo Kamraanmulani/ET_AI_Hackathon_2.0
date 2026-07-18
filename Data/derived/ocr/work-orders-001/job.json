@@ -1,0 +1,1439 @@
+{
+  "job_id": "ocr-C7B4C6A1D0EDBD82-d45abc3ee34655eb",
+  "source_id": "work-orders-001",
+  "source_path": "Data/Maintenance Records  Work Orders/Maintenance Records  Work Orders.pdf",
+  "source_hash": "C7B4C6A1D0EDBD8243EF9021626CBD80716D6C9A0FFF8DF8B3F5AC401D868498",
+  "cache_key": "C7B4C6A1D0EDBD82-d45abc3ee34655eb",
+  "configuration_hash": "d45abc3ee34655eb",
+  "configuration": {
+    "engine": "PaddleOCR",
+    "paddleocr_version": "3.7.0",
+    "paddle_version": "3.3.1",
+    "language": "en",
+    "device": "cpu",
+    "paddlex_enable_mkldnn_bydefault": false,
+    "render_scale": 2.0,
+    "document_orientation": false,
+    "document_unwarping": false,
+    "textline_orientation": false,
+    "return_word_box": true
+  },
+  "status": "completed",
+  "review_state": "pending_review",
+  "started_at": "2026-07-14T19:15:42.537864+00:00",
+  "page_count": 5,
+  "pages": [
+    {
+      "source_page": 1,
+      "artifact": "pages/page-001.json",
+      "review_state": "pending_review",
+      "region_count": 29,
+      "mean_confidence": 0.995173,
+      "duration_ms": 72583.52
+    },
+    {
+      "source_page": 2,
+      "artifact": "pages/page-002.json",
+      "review_state": "pending_review",
+      "region_count": 29,
+      "mean_confidence": 0.99565,
+      "duration_ms": 74323.12
+    },
+    {
+      "source_page": 3,
+      "artifact": "pages/page-003.json",
+      "review_state": "pending_review",
+      "region_count": 30,
+      "mean_confidence": 0.995081,
+      "duration_ms": 61579.5
+    },
+    {
+      "source_page": 4,
+      "artifact": "pages/page-004.json",
+      "review_state": "pending_review",
+      "region_count": 28,
+      "mean_confidence": 0.993388,
+      "duration_ms": 100091.03
+    },
+    {
+      "source_page": 5,
+      "artifact": "pages/page-005.json",
+      "review_state": "pending_review",
+      "region_count": 12,
+      "mean_confidence": 0.98903,
+      "duration_ms": 55697.86
+    }
+  ],
+  "candidate_fields": [
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0113",
+      "source_page": 1,
+      "source_region_id": "p001-r007",
+      "source_text": "WO-2024-0113",
+      "confidence": 0.999455,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "14-Mar-2024",
+      "source_page": 1,
+      "source_region_id": "p001-r008",
+      "source_text": "Date: 14-Mar-2024 Equipment: R-201 (Reactor) Reported By: Ramesh Iyer, Shift Engineer",
+      "confidence": 0.998855,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "R-201",
+      "source_page": 1,
+      "source_region_id": "p001-r008",
+      "source_text": "Date: 14-Mar-2024 Equipment: R-201 (Reactor) Reported By: Ramesh Iyer, Shift Engineer",
+      "confidence": 0.998855,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "TIC-201",
+      "source_page": 1,
+      "source_region_id": "p001-r009",
+      "source_text": "Symptom: Jacket outlet temp reading 6\u00b0C higher than setpoint during batch 220. TIC-201",
+      "confidence": 0.990261,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0114",
+      "source_page": 1,
+      "source_region_id": "p001-r014",
+      "source_text": "WO-2024-0114",
+      "confidence": 0.999436,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "15-Mar-2024",
+      "source_page": 1,
+      "source_region_id": "p001-r015",
+      "source_text": "Date: 15-Mar-2024 Equipment: P-101 Reported: Feed Pump A tripping intermittently on",
+      "confidence": 0.995938,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r015",
+      "source_text": "Date: 15-Mar-2024 Equipment: P-101 Reported: Feed Pump A tripping intermittently on",
+      "confidence": 0.995938,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-102",
+      "source_page": 1,
+      "source_region_id": "p001-r017",
+      "source_text": "Suspected worn impeller bearing causing increased load. Switched over to P-102 (standby)",
+      "confidence": 0.999107,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r018",
+      "source_text": "per XV-101/XV-102 changeover procedure. P-101 pulled for bearing inspection. Findings:",
+      "confidence": 0.999282,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r020",
+      "source_text": "hours. Parts Used: Bearing set (SKF 6205), lubricant Tech: S. Patil Downtime: 4 hrs (P-101",
+      "confidence": 0.995257,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-102",
+      "source_page": 1,
+      "source_region_id": "p001-r021",
+      "source_text": "offline, P-102 covering) Status: Closed",
+      "confidence": 0.997417,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0119",
+      "source_page": 1,
+      "source_region_id": "p001-r022",
+      "source_text": "WO-2024-0119",
+      "confidence": 0.998642,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "22-Mar-2024",
+      "source_page": 1,
+      "source_region_id": "p001-r023",
+      "source_text": "Date: 22-Mar-2024 Equip Tag: PSV-201 Type: Scheduled Test Description: Annual pop-",
+      "confidence": 0.995261,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PSV-201",
+      "source_page": 1,
+      "source_region_id": "p001-r023",
+      "source_text": "Date: 22-Mar-2024 Equip Tag: PSV-201 Type: Scheduled Test Description: Annual pop-",
+      "confidence": 0.995261,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0122",
+      "source_page": 1,
+      "source_region_id": "p001-r027",
+      "source_text": "WO-2024-0122",
+      "confidence": 0.998426,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "O2-Apr-2024",
+      "source_page": 1,
+      "source_region_id": "p001-r028",
+      "source_text": "Date: O2-Apr-2024 Equipment: C-301 / Distillation Column Complaint: Operators reported",
+      "confidence": 0.986829,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "C-301",
+      "source_page": 1,
+      "source_region_id": "p001-r028",
+      "source_text": "Date: O2-Apr-2024 Equipment: C-301 / Distillation Column Complaint: Operators reported",
+      "confidence": 0.986829,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PIC-301",
+      "source_page": 1,
+      "source_region_id": "p001-r029",
+      "source_text": "unstable overhead pressure, PIC-301 hunting. Root Cause Found: PV-301 control valve",
+      "confidence": 0.997672,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0087",
+      "source_page": 2,
+      "source_region_id": "p002-r005",
+      "source_text": "turnaround \u2014 drift trend observed over last 3 work orders (see WO-2024-0087, WO-2024-",
+      "confidence": 0.996908,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0128",
+      "source_page": 2,
+      "source_region_id": "p002-r007",
+      "source_text": "WO-2024-0128",
+      "confidence": 0.99969,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "09-Apr-2024",
+      "source_page": 2,
+      "source_region_id": "p002-r008",
+      "source_text": "Date: 09-Apr-2024 Equipment: LV-301 (bottoms level control valve, C-301) Sticking",
+      "confidence": 0.996188,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "C-301",
+      "source_page": 2,
+      "source_region_id": "p002-r008",
+      "source_text": "Date: 09-Apr-2024 Equipment: LV-301 (bottoms level control valve, C-301) Sticking",
+      "confidence": 0.996188,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0134",
+      "source_page": 2,
+      "source_region_id": "p002-r012",
+      "source_text": "WO-2024-0134",
+      "confidence": 0.999677,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "18-Apr-2024",
+      "source_page": 2,
+      "source_region_id": "p002-r013",
+      "source_text": "Date: 18-Apr-2024 Equipment: V-401 (Raw Material Storage Tank) Reported By: D. Rao,",
+      "confidence": 0.99267,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "V-401",
+      "source_page": 2,
+      "source_region_id": "p002-r013",
+      "source_text": "Date: 18-Apr-2024 Equipment: V-401 (Raw Material Storage Tank) Reported By: D. Rao,",
+      "confidence": 0.99267,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0140",
+      "source_page": 2,
+      "source_region_id": "p002-r018",
+      "source_text": "WO-2024-0140",
+      "confidence": 0.999725,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "27-Apr-2024",
+      "source_page": 2,
+      "source_region_id": "p002-r019",
+      "source_text": "Date: 27-Apr-2024 Equipment Tag: XV-401 Fault: Valve handwheel stiff, difficult to",
+      "confidence": 0.998305,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "V-401",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "source_text": "operate during V-401 to P-401 transfer sequence. Action: Valve stem lubricated, gland",
+      "confidence": 0.999676,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-401",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "source_text": "operate during V-401 to P-401 transfer sequence. Action: Valve stem lubricated, gland",
+      "confidence": 0.999676,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0151",
+      "source_page": 2,
+      "source_region_id": "p002-r023",
+      "source_text": "WO-2024-0151",
+      "confidence": 0.999807,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "09-May-2024",
+      "source_page": 2,
+      "source_region_id": "p002-r024",
+      "source_text": "Date: 09-May-2024 Equip: P-401 Transfer Pump Unusual vibration noted during routine",
+      "confidence": 0.994085,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-401",
+      "source_page": 2,
+      "source_region_id": "p002-r024",
+      "source_text": "Date: 09-May-2024 Equip: P-401 Transfer Pump Unusual vibration noted during routine",
+      "confidence": 0.994085,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0158",
+      "source_page": 3,
+      "source_region_id": "p003-r001",
+      "source_text": "WO-2024-0158",
+      "confidence": 0.999814,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "21-May-2024",
+      "source_page": 3,
+      "source_region_id": "p003-r002",
+      "source_text": "Date: 21-May-2024 Equipment: B-501 (Steam Boiler) Priority: HIGH Reported By: Ramesh",
+      "confidence": 0.995236,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "B-501",
+      "source_page": 3,
+      "source_region_id": "p003-r002",
+      "source_text": "Date: 21-May-2024 Equipment: B-501 (Steam Boiler) Priority: HIGH Reported By: Ramesh",
+      "confidence": 0.995236,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "LIC-501",
+      "source_page": 3,
+      "source_region_id": "p003-r003",
+      "source_text": "Iyer Symptom: LIC-501 alarm \u2014 boiler drum low-level trip occurred during shift. Boiler",
+      "confidence": 0.992648,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0163",
+      "source_page": 3,
+      "source_region_id": "p003-r012",
+      "source_text": "WO-2024-0163",
+      "confidence": 0.999801,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "30-May-2024",
+      "source_page": 3,
+      "source_region_id": "p003-r013",
+      "source_text": "Date: 30-May-2024 Tag: PSV-501 Annual relief valve test. Set pressure verified within spec",
+      "confidence": 0.990679,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PSV-501",
+      "source_page": 3,
+      "source_region_id": "p003-r013",
+      "source_text": "Date: 30-May-2024 Tag: PSV-501 Annual relief valve test. Set pressure verified within spec",
+      "confidence": 0.990679,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0170",
+      "source_page": 3,
+      "source_region_id": "p003-r015",
+      "source_text": "WO-2024-0170",
+      "confidence": 0.999752,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "O8-Jun-2024",
+      "source_page": 3,
+      "source_region_id": "p003-r016",
+      "source_text": "Date: O8-Jun-2024 Equipment: FV-501 (fuel control valve, Boiler House) Complaint: FIC-",
+      "confidence": 0.981257,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0177",
+      "source_page": 3,
+      "source_region_id": "p003-r022",
+      "source_text": "WO-2024-0177",
+      "confidence": 0.999734,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "19-Jun-2024",
+      "source_page": 3,
+      "source_region_id": "p003-r023",
+      "source_text": "Date: 19-Jun-2024 Equip: ETP-601 Routine \u2014 chemical dosing pump for treatment tank",
+      "confidence": 0.998946,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "ETP-601",
+      "source_page": 3,
+      "source_region_id": "p003-r023",
+      "source_text": "Date: 19-Jun-2024 Equip: ETP-601 Routine \u2014 chemical dosing pump for treatment tank",
+      "confidence": 0.998946,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "AIT-601",
+      "source_page": 3,
+      "source_region_id": "p003-r025",
+      "source_text": "Dosing rate verified back to spec (per AIT-601 readings pre/post). Tech: S. Patil Downtime: 1",
+      "confidence": 0.995509,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0183",
+      "source_page": 3,
+      "source_region_id": "p003-r027",
+      "source_text": "WO-2024-0183",
+      "confidence": 0.999918,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "27-Jun-2024",
+      "source_page": 3,
+      "source_region_id": "p003-r028",
+      "source_text": "Date: 27-Jun-2024 Equipment: XV-603 (ETP discharge auto-close valve) Priority: HIGH \u2014",
+      "confidence": 0.980743,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "XV-603",
+      "source_page": 3,
+      "source_region_id": "p003-r028",
+      "source_text": "Date: 27-Jun-2024 Equipment: XV-603 (ETP discharge auto-close valve) Priority: HIGH \u2014",
+      "confidence": 0.980743,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "AAH-601",
+      "source_page": 3,
+      "source_region_id": "p003-r029",
+      "source_text": "Safety Interlock Related Reported: Monthly interlock test \u2014 AAH-601 high alarm",
+      "confidence": 0.996876,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "XV-603",
+      "source_page": 3,
+      "source_region_id": "p003-r030",
+      "source_text": "simulated, XV-603 auto-close function verified. Valve closed within 4 seconds of simulated",
+      "confidence": 0.990488,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0191",
+      "source_page": 4,
+      "source_region_id": "p004-r004",
+      "source_text": "WO-2024-0191",
+      "confidence": 0.999302,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "05-Jul-2024",
+      "source_page": 4,
+      "source_region_id": "p004-r005",
+      "source_text": "Date: 05-Jul-2024 Equipment: P-601 (Effluent Transfer Pump) Seal leak observed during",
+      "confidence": 0.995809,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-601",
+      "source_page": 4,
+      "source_region_id": "p004-r005",
+      "source_text": "Date: 05-Jul-2024 Equipment: P-601 (Effluent Transfer Pump) Seal leak observed during",
+      "confidence": 0.995809,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0198",
+      "source_page": 4,
+      "source_region_id": "p004-r009",
+      "source_text": "WO-2024-0198",
+      "confidence": 0.999641,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "14-Jul-2024",
+      "source_page": 4,
+      "source_region_id": "p004-r010",
+      "source_text": "Date: 14-Jul-2024 Equipment: AGT-201 (Reactor Agitator Motor) Reported By: A. Verma,",
+      "confidence": 0.998153,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0205",
+      "source_page": 4,
+      "source_region_id": "p004-r016",
+      "source_text": "WO-2024-0205",
+      "confidence": 0.999461,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "25-Jul-2024",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "source_text": "Date: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014",
+      "confidence": 0.996313,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "C-301",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "source_text": "Date: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014",
+      "confidence": 0.996313,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "E-301",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "source_text": "Date: 25-Jul-2024 Equipment: E-301 (Reboiler, C-301) Heat transfer efficiency degraded \u2014",
+      "confidence": 0.996313,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "TIC-301",
+      "source_page": 4,
+      "source_region_id": "p004-r018",
+      "source_text": "TIC-301 requiring higher steam flow than historical baseline to maintain column bottoms",
+      "confidence": 0.99765,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0212",
+      "source_page": 4,
+      "source_region_id": "p004-r023",
+      "source_text": "WO-2024-0212",
+      "confidence": 0.999487,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "date_raw",
+      "value": "03-Aug-2024",
+      "source_page": 4,
+      "source_region_id": "p004-r024",
+      "source_text": "Date: 03-Aug-2024 Equip Tag: HS-101 / P-101 Hand switch (HOA) for Feed Pump A found",
+      "confidence": 0.986084,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 4,
+      "source_region_id": "p004-r024",
+      "source_text": "Date: 03-Aug-2024 Equip Tag: HS-101 / P-101 Hand switch (HOA) for Feed Pump A found",
+      "confidence": 0.986084,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-102",
+      "source_page": 4,
+      "source_region_id": "p004-r026",
+      "source_text": "inadvertent operation during nearby work. No process impact (P-102 was running). Switch",
+      "confidence": 0.98627,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PSV-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "source_text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "TIC-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "source_text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "R-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "source_text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "source_text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-102",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "source_text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "TIC-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PIC-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "C-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "E-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "V-401",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-401",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "source_text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "PSV-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "FIC-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "LIC-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "ETP-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "AAH-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "B-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "source_text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0151",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0205",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "E-301",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-401",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "source_text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0119",
+      "source_page": 5,
+      "source_region_id": "p005-r008",
+      "source_text": "Safety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-",
+      "confidence": 0.987773,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "work_order_id",
+      "value": "WO-2024-0163",
+      "source_page": 5,
+      "source_region_id": "p005-r008",
+      "source_text": "Safety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-",
+      "confidence": 0.987773,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r009",
+      "source_text": "2024-0183 (XV-603 interlock test)",
+      "confidence": 0.995606,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "P-101",
+      "source_page": 5,
+      "source_region_id": "p005-r010",
+      "source_text": "Note the deliberate naming inconsistencies across entries (e.g., \"P-101\" vs \"Feed Pump",
+      "confidence": 0.994053,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "source_text": "A\", \"R-201\" vs \"the reactor\", \"XV-603\" tag sometimes given full context, sometimes",
+      "confidence": 0.998536,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "field": "asset_tag",
+      "value": "R-201",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "source_text": "A\", \"R-201\" vs \"the reactor\", \"XV-603\" tag sometimes given full context, sometimes",
+      "confidence": 0.998536,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    }
+  ],
+  "candidate_asset_links": [
+    {
+      "asset_tag": "R-201",
+      "source_page": 1,
+      "source_region_id": "p001-r008",
+      "confidence": 0.998855,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "TIC-201",
+      "source_page": 1,
+      "source_region_id": "p001-r009",
+      "confidence": 0.990261,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r015",
+      "confidence": 0.995938,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-102",
+      "source_page": 1,
+      "source_region_id": "p001-r017",
+      "confidence": 0.999107,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r018",
+      "confidence": 0.999282,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 1,
+      "source_region_id": "p001-r020",
+      "confidence": 0.995257,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-102",
+      "source_page": 1,
+      "source_region_id": "p001-r021",
+      "confidence": 0.997417,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PSV-201",
+      "source_page": 1,
+      "source_region_id": "p001-r023",
+      "confidence": 0.995261,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "C-301",
+      "source_page": 1,
+      "source_region_id": "p001-r028",
+      "confidence": 0.986829,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PIC-301",
+      "source_page": 1,
+      "source_region_id": "p001-r029",
+      "confidence": 0.997672,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "C-301",
+      "source_page": 2,
+      "source_region_id": "p002-r008",
+      "confidence": 0.996188,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "V-401",
+      "source_page": 2,
+      "source_region_id": "p002-r013",
+      "confidence": 0.99267,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "V-401",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "confidence": 0.999676,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-401",
+      "source_page": 2,
+      "source_region_id": "p002-r020",
+      "confidence": 0.999676,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-401",
+      "source_page": 2,
+      "source_region_id": "p002-r024",
+      "confidence": 0.994085,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "B-501",
+      "source_page": 3,
+      "source_region_id": "p003-r002",
+      "confidence": 0.995236,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "LIC-501",
+      "source_page": 3,
+      "source_region_id": "p003-r003",
+      "confidence": 0.992648,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PSV-501",
+      "source_page": 3,
+      "source_region_id": "p003-r013",
+      "confidence": 0.990679,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "ETP-601",
+      "source_page": 3,
+      "source_region_id": "p003-r023",
+      "confidence": 0.998946,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "AIT-601",
+      "source_page": 3,
+      "source_region_id": "p003-r025",
+      "confidence": 0.995509,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "XV-603",
+      "source_page": 3,
+      "source_region_id": "p003-r028",
+      "confidence": 0.980743,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "AAH-601",
+      "source_page": 3,
+      "source_region_id": "p003-r029",
+      "confidence": 0.996876,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "XV-603",
+      "source_page": 3,
+      "source_region_id": "p003-r030",
+      "confidence": 0.990488,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-601",
+      "source_page": 4,
+      "source_region_id": "p004-r005",
+      "confidence": 0.995809,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "C-301",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "confidence": 0.996313,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "E-301",
+      "source_page": 4,
+      "source_region_id": "p004-r017",
+      "confidence": 0.996313,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "TIC-301",
+      "source_page": 4,
+      "source_region_id": "p004-r018",
+      "confidence": 0.99765,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 4,
+      "source_region_id": "p004-r024",
+      "confidence": 0.986084,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-102",
+      "source_page": 4,
+      "source_region_id": "p004-r026",
+      "confidence": 0.98627,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PSV-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "TIC-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "R-201",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-102",
+      "source_page": 5,
+      "source_region_id": "p005-r003",
+      "confidence": 0.99428,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "TIC-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PIC-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "C-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "E-301",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "V-401",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-401",
+      "source_page": 5,
+      "source_region_id": "p005-r004",
+      "confidence": 0.978698,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "PSV-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "FIC-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "LIC-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "ETP-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "AAH-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "B-501",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-601",
+      "source_page": 5,
+      "source_region_id": "p005-r005",
+      "confidence": 0.978717,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "E-301",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-401",
+      "source_page": 5,
+      "source_region_id": "p005-r006",
+      "confidence": 0.986839,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r009",
+      "confidence": 0.995606,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "P-101",
+      "source_page": 5,
+      "source_region_id": "p005-r010",
+      "confidence": 0.994053,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "XV-603",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "confidence": 0.998536,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    },
+    {
+      "asset_tag": "R-201",
+      "source_page": 5,
+      "source_region_id": "p005-r011",
+      "confidence": 0.998536,
+      "state": "AI proposed",
+      "review_state": "pending_review"
+    }
+  ],
+  "notes": [
+    "All OCR text, field candidates, and asset links are AI proposed until human review.",
+    "No diagnosis, root-cause conclusion, maintenance action, or source-normalised date is created by this baseline."
+  ],
+  "finished_at": "2026-07-14T19:21:47.844497+00:00",
+  "duration_ms": 365306.49
+}

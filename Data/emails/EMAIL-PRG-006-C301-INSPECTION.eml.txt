@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-006-C301-INSPECTION
+title: C-301 Inspection-Finding Review
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-09-05
+owner_role: Reliability Engineer
+related_asset_tags: [C-301, E-301]
+related_drawing_ids: [PCP-PID-002]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: reliability.engineer@pragyan.demo
+To: operations.manager@pragyan.demo
+CC: inspection.coordinator@pragyan.demo
+Subject: C-301 inspection-finding review
+Date: 2025-09-05
+Classification: Internal Demo - Synthetic
+
+Please review the documentation follow-up associated with C-301 and E-301 and record the nominated owner in the review workflow. This message is limited to the linked synthetic records.
+
+References: NMR-PRG-DST-004; INS-PRG-C301-001

@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-005-STORAGE-TRANSFER
+title: Storage-Transfer Communication Follow-Up
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-08-31
+owner_role: Shift Engineer
+related_asset_tags: [V-401, P-401, V-402]
+related_drawing_ids: [PCP-PID-003]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: shift.engineer@pragyan.demo
+To: storage.area.owner@pragyan.demo
+CC: maintenance.planner@pragyan.demo
+Subject: Storage-transfer communication follow-up
+Date: 2025-08-31
+Classification: Internal Demo - Synthetic
+
+Please capture the transfer communication evidence for V-401, P-401, and V-402 in the shared review record. This note supports the synthetic training scenario and does not confirm any equipment or process condition.
+
+References: NMR-PRG-STO-003

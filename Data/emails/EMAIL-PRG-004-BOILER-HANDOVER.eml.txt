@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-004-BOILER-HANDOVER
+title: Boiler Maintenance-Handover Clarification
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-08-25
+owner_role: Maintenance Planner
+related_asset_tags: [B-501, P-501]
+related_drawing_ids: [PCP-PID-004]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: maintenance.planner@pragyan.demo
+To: utilities.area.owner@pragyan.demo
+CC: shift.engineer@pragyan.demo
+Subject: Boiler maintenance-handover clarification
+Date: 2025-08-25
+Classification: Internal Demo - Synthetic
+
+Please use the approved handover record as the single evidence location for B-501 and P-501. The scenario and inspection review require a clear owner and a human-recorded follow-up status.
+
+References: NMR-PRG-UTL-002; INS-PRG-B501-001

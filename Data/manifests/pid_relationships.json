@@ -1,0 +1,22 @@
+{
+  "relationship_version": "1.0",
+  "source": "manual_review_of_supplied_pids",
+  "relationships": [
+    { "from": "P-101", "type": "feeds", "to": "R-201", "source_id": "pid-001-reactor", "state": "verified" },
+    { "from": "P-102", "type": "standby_feeds", "to": "R-201", "source_id": "pid-001-reactor", "state": "verified" },
+    { "from": "PSV-201", "type": "protects", "to": "R-201", "source_id": "pid-001-reactor", "state": "verified" },
+    { "from": "R-201", "type": "feeds", "to": "C-301", "source_id": "pid-002-distillation", "state": "verified" },
+    { "from": "E-301", "type": "reboils", "to": "C-301", "source_id": "pid-002-distillation", "state": "verified" },
+    { "from": "E-302", "type": "condenses_overhead_from", "to": "C-301", "source_id": "pid-002-distillation", "state": "verified" },
+    { "from": "P-301", "type": "returns_reflux_to", "to": "C-301", "source_id": "pid-002-distillation", "state": "verified" },
+    { "from": "C-301", "type": "bottoms_to", "to": "V-401", "source_id": "pid-003-storage", "state": "verified" },
+    { "from": "V-401", "type": "feeds", "to": "P-401", "source_id": "pid-003-storage", "state": "verified" },
+    { "from": "P-401", "type": "transfers_to", "to": "V-402", "source_id": "pid-003-storage", "state": "verified" },
+    { "from": "P-501", "type": "feeds", "to": "B-501", "source_id": "pid-004-boiler", "state": "verified" },
+    { "from": "PSV-501", "type": "protects", "to": "B-501", "source_id": "pid-004-boiler", "state": "verified" },
+    { "from": "ETP-601", "type": "feeds", "to": "P-601", "source_id": "pid-005-etp", "state": "verified" },
+    { "from": "LIC-601", "type": "controls", "to": "LV-601", "source_id": "pid-005-etp", "state": "verified" },
+    { "from": "AAH-601", "type": "auto_close_interlock_for", "to": "XV-603", "source_id": "pid-005-etp", "state": "verified" },
+    { "from": "P-601", "type": "transfers_through", "to": "XV-603", "source_id": "pid-005-etp", "state": "verified" }
+  ]
+}

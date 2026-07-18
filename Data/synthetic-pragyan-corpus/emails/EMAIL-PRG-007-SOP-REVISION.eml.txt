@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-007-SOP-REVISION
+title: SOP Revision Notification
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-09-12
+owner_role: Operations Manager
+related_asset_tags: [R-201, C-301, ETP-601]
+related_drawing_ids: [PCP-PID-001, PCP-PID-002, PCP-PID-005]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: operations.manager@pragyan.demo
+To: shift.engineer@pragyan.demo
+CC: ehs.reviewer@pragyan.demo
+Subject: SOP revision notification
+Date: 2025-09-12
+Classification: Internal Demo - Synthetic
+
+The current demo SOP excerpts have been reissued for review context covering R-201, C-301, and ETP-601. Please use the linked excerpts as training references only and route any interpretation to a qualified human reviewer.
+
+References: SOP-PRG-ETP-001; SOP-PRG-OPS-004

@@ -1,0 +1,384 @@
+{
+  "source_page": 5,
+  "rendered_image": "page_images/page-005.png",
+  "render_scale": 2.0,
+  "raw_text": "Summary\nTotal Work Orders: 18\nEquipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,\nC-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,\nB-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601\nOpen/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301\nfouling, deferred to turnaround)\nSafety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-\n2024-0183 (XV-603 interlock test)\nNote the deliberate naming inconsistencies across entries (e.g., \"P-101\" vs \"Feed Pump\nA\", \"R-201\" vs \"the reactor\", \"XV-603\" tag sometimes given full context, sometimes\nabbreviated) \u2014 useful for testing your entity resolution/normalization layer.",
+  "regions": [
+    {
+      "region_id": "p005-r001",
+      "text": "Summary",
+      "confidence": 0.999934,
+      "polygon": [
+        [
+          68,
+          59
+        ],
+        [
+          205,
+          59
+        ],
+        [
+          205,
+          91
+        ],
+        [
+          68,
+          91
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 59,
+        "width": 137,
+        "height": 32
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r002",
+      "text": "Total Work Orders: 18",
+      "confidence": 0.968057,
+      "polygon": [
+        [
+          126,
+          111
+        ],
+        [
+          382,
+          109
+        ],
+        [
+          383,
+          136
+        ],
+        [
+          126,
+          138
+        ]
+      ],
+      "bounding_box": {
+        "x": 126,
+        "y": 109,
+        "width": 257,
+        "height": 29
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r003",
+      "text": "Equipment covered: R-201, P-101, P-102, AGT-201, TIC-201, PSV-201, CV-201, HS-101,",
+      "confidence": 0.99428,
+      "polygon": [
+        [
+          127,
+          152
+        ],
+        [
+          1081,
+          151
+        ],
+        [
+          1081,
+          181
+        ],
+        [
+          127,
+          182
+        ]
+      ],
+      "bounding_box": {
+        "x": 127,
+        "y": 151,
+        "width": 954,
+        "height": 31
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r004",
+      "text": "C-301, PIC-301, PV-301, LV-301, TIC-301, TV-301, E-301, V-401, LG-401, XV-401, P-401,",
+      "confidence": 0.978698,
+      "polygon": [
+        [
+          130,
+          190
+        ],
+        [
+          1093,
+          190
+        ],
+        [
+          1093,
+          217
+        ],
+        [
+          130,
+          217
+        ]
+      ],
+      "bounding_box": {
+        "x": 130,
+        "y": 190,
+        "width": 963,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r005",
+      "text": "B-501, LIC-501, LV-501, PSV-501, FIC-501, FV-501, ETP-601, XV-603, AAH-601, P-601",
+      "confidence": 0.978717,
+      "polygon": [
+        [
+          131,
+          228
+        ],
+        [
+          1074,
+          228
+        ],
+        [
+          1074,
+          251
+        ],
+        [
+          131,
+          251
+        ]
+      ],
+      "bounding_box": {
+        "x": 131,
+        "y": 228,
+        "width": 943,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r006",
+      "text": "Open/Monitoring items: WO-2024-0151 (P-401 bearing), WO-2024-0205 (E-301",
+      "confidence": 0.986839,
+      "polygon": [
+        [
+          129,
+          267
+        ],
+        [
+          1028,
+          265
+        ],
+        [
+          1028,
+          295
+        ],
+        [
+          129,
+          297
+        ]
+      ],
+      "bounding_box": {
+        "x": 129,
+        "y": 265,
+        "width": 899,
+        "height": 32
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r007",
+      "text": "fouling, deferred to turnaround)",
+      "confidence": 0.998773,
+      "polygon": [
+        [
+          130,
+          305
+        ],
+        [
+          491,
+          305
+        ],
+        [
+          491,
+          332
+        ],
+        [
+          130,
+          332
+        ]
+      ],
+      "bounding_box": {
+        "x": 130,
+        "y": 305,
+        "width": 361,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r008",
+      "text": "Safety-critical/compliance-linked: WO-2024-0119, WO-2024-0163 (PSV tests), WO-",
+      "confidence": 0.987773,
+      "polygon": [
+        [
+          130,
+          346
+        ],
+        [
+          1076,
+          346
+        ],
+        [
+          1076,
+          373
+        ],
+        [
+          130,
+          373
+        ]
+      ],
+      "bounding_box": {
+        "x": 130,
+        "y": 346,
+        "width": 946,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r009",
+      "text": "2024-0183 (XV-603 interlock test)",
+      "confidence": 0.995606,
+      "polygon": [
+        [
+          131,
+          384
+        ],
+        [
+          510,
+          384
+        ],
+        [
+          510,
+          408
+        ],
+        [
+          131,
+          408
+        ]
+      ],
+      "bounding_box": {
+        "x": 131,
+        "y": 384,
+        "width": 379,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r010",
+      "text": "Note the deliberate naming inconsistencies across entries (e.g., \"P-101\" vs \"Feed Pump",
+      "confidence": 0.994053,
+      "polygon": [
+        [
+          127,
+          423
+        ],
+        [
+          1092,
+          424
+        ],
+        [
+          1092,
+          453
+        ],
+        [
+          127,
+          452
+        ]
+      ],
+      "bounding_box": {
+        "x": 127,
+        "y": 423,
+        "width": 965,
+        "height": 30
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r011",
+      "text": "A\", \"R-201\" vs \"the reactor\", \"XV-603\" tag sometimes given full context, sometimes",
+      "confidence": 0.998536,
+      "polygon": [
+        [
+          130,
+          460
+        ],
+        [
+          1042,
+          461
+        ],
+        [
+          1042,
+          488
+        ],
+        [
+          130,
+          487
+        ]
+      ],
+      "bounding_box": {
+        "x": 130,
+        "y": 460,
+        "width": 912,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p005-r012",
+      "text": "abbreviated) \u2014 useful for testing your entity resolution/normalization layer.",
+      "confidence": 0.987094,
+      "polygon": [
+        [
+          130,
+          498
+        ],
+        [
+          977,
+          498
+        ],
+        [
+          977,
+          525
+        ],
+        [
+          130,
+          525
+        ]
+      ],
+      "bounding_box": {
+        "x": 130,
+        "y": 498,
+        "width": 847,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    }
+  ],
+  "region_count": 12,
+  "mean_confidence": 0.98903,
+  "duration_ms": 55697.86,
+  "review_state": "pending_review"
+}

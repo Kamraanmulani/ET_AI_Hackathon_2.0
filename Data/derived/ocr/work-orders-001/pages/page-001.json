@@ -1,0 +1,911 @@
+{
+  "source_page": 1,
+  "rendered_image": "page_images/page-001.png",
+  "render_scale": 2.0,
+  "raw_text": "Pragyan Chemical Plant \u2014 Maintenance Work Orders\nSynthetic dataset generated for AI Knowledge Intelligence prototype. Equipment tags\nmatch the finalized P&ID set (PCP-PID-001 through PCP-PID-005). Note: formatting,\nnaming conventions, and completeness are deliberately inconsistent across entries to\nsimulate real-world messy maintenance records \u2014 this variation is intentional and useful\nfor testing entity extraction/resolution.\nWO-2024-0113\nDate: 14-Mar-2024 Equipment: R-201 (Reactor) Reported By: Ramesh Iyer, Shift Engineer\nSymptom: Jacket outlet temp reading 6\u00b0C higher than setpoint during batch 220. TIC-201\nloop appears sluggish to respond. Action Taken: Checked CV-201 actuator \u2014 found partial\nfouling on valve seat restricting cooling water flow. Cleaned and re-calibrated. Verified TIC-\n201 response time back to normal (<90 sec). Parts Used: Valve seat gasket kit (1x)\nTechnician: Suresh Patil Downtime: 2.5 hrs Status: Closed\nWO-2024-0114\nDate: 15-Mar-2024 Equipment: P-101 Reported: Feed Pump A tripping intermittently on\noverload during startup. Investigation/Action: Motor amp draw checked \u2014 within spec.\nSuspected worn impeller bearing causing increased load. Switched over to P-102 (standby)\nper XV-101/XV-102 changeover procedure. P-101 pulled for bearing inspection. Findings:\nBearing showed early-stage pitting, consistent with normal wear at ~14,000 operating\nhours. Parts Used: Bearing set (SKF 6205), lubricant Tech: S. Patil Downtime: 4 hrs (P-101\noffline, P-102 covering) Status: Closed\nWO-2024-0119\nDate: 22-Mar-2024 Equip Tag: PSV-201 Type: Scheduled Test Description: Annual pop-\ntest of reactor relief valve per OISD-STD-118 requirement. Result: Set pressure verified at\n8.4 bar (spec: 8.0-8.5 bar). PASS. Performed By: Vikram Singh (Safety Officer), witnessed\nby M. Joshi Next Due: Mar-2025\nWO-2024-0122\nDate: O2-Apr-2024 Equipment: C-301 / Distillation Column Complaint: Operators reported\nunstable overhead pressure, PIC-301 hunting. Root Cause Found: PV-301 control valve",
+  "regions": [
+    {
+      "region_id": "p001-r001",
+      "text": "Pragyan Chemical Plant \u2014 Maintenance Work Orders",
+      "confidence": 0.98575,
+      "polygon": [
+        [
+          67,
+          81
+        ],
+        [
+          928,
+          78
+        ],
+        [
+          928,
+          115
+        ],
+        [
+          68,
+          118
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 78,
+        "width": 861,
+        "height": 40
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r002",
+      "text": "Synthetic dataset generated for AI Knowledge Intelligence prototype. Equipment tags",
+      "confidence": 0.999863,
+      "polygon": [
+        [
+          69,
+          134
+        ],
+        [
+          1029,
+          135
+        ],
+        [
+          1029,
+          164
+        ],
+        [
+          69,
+          163
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 134,
+        "width": 960,
+        "height": 30
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r003",
+      "text": "match the finalized P&ID set (PCP-PID-001 through PCP-PID-005). Note: formatting,",
+      "confidence": 0.997542,
+      "polygon": [
+        [
+          67,
+          168
+        ],
+        [
+          1022,
+          170
+        ],
+        [
+          1022,
+          200
+        ],
+        [
+          67,
+          198
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 168,
+        "width": 955,
+        "height": 32
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r004",
+      "text": "naming conventions, and completeness are deliberately inconsistent across entries to",
+      "confidence": 0.999964,
+      "polygon": [
+        [
+          70,
+          210
+        ],
+        [
+          1025,
+          210
+        ],
+        [
+          1025,
+          234
+        ],
+        [
+          70,
+          234
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 210,
+        "width": 955,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r005",
+      "text": "simulate real-world messy maintenance records \u2014 this variation is intentional and useful",
+      "confidence": 0.989151,
+      "polygon": [
+        [
+          70,
+          245
+        ],
+        [
+          1064,
+          245
+        ],
+        [
+          1064,
+          268
+        ],
+        [
+          70,
+          268
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 245,
+        "width": 994,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r006",
+      "text": "for testing entity extraction/resolution.",
+      "confidence": 0.999212,
+      "polygon": [
+        [
+          70,
+          281
+        ],
+        [
+          505,
+          281
+        ],
+        [
+          505,
+          305
+        ],
+        [
+          70,
+          305
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 281,
+        "width": 435,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r007",
+      "text": "WO-2024-0113",
+      "confidence": 0.999455,
+      "polygon": [
+        [
+          70,
+          402
+        ],
+        [
+          246,
+          402
+        ],
+        [
+          246,
+          426
+        ],
+        [
+          70,
+          426
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 402,
+        "width": 176,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r008",
+      "text": "Date: 14-Mar-2024 Equipment: R-201 (Reactor) Reported By: Ramesh Iyer, Shift Engineer",
+      "confidence": 0.998855,
+      "polygon": [
+        [
+          69,
+          449
+        ],
+        [
+          1079,
+          449
+        ],
+        [
+          1079,
+          476
+        ],
+        [
+          69,
+          476
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 449,
+        "width": 1010,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r009",
+      "text": "Symptom: Jacket outlet temp reading 6\u00b0C higher than setpoint during batch 220. TIC-201",
+      "confidence": 0.990261,
+      "polygon": [
+        [
+          70,
+          486
+        ],
+        [
+          1076,
+          486
+        ],
+        [
+          1076,
+          513
+        ],
+        [
+          70,
+          513
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 486,
+        "width": 1006,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r010",
+      "text": "loop appears sluggish to respond. Action Taken: Checked CV-201 actuator \u2014 found partial",
+      "confidence": 0.993765,
+      "polygon": [
+        [
+          68,
+          523
+        ],
+        [
+          1084,
+          521
+        ],
+        [
+          1084,
+          547
+        ],
+        [
+          68,
+          549
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 521,
+        "width": 1016,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r011",
+      "text": "fouling on valve seat restricting cooling water flow. Cleaned and re-calibrated. Verified TIC-",
+      "confidence": 0.999907,
+      "polygon": [
+        [
+          68,
+          557
+        ],
+        [
+          1090,
+          556
+        ],
+        [
+          1090,
+          583
+        ],
+        [
+          68,
+          584
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 556,
+        "width": 1022,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r012",
+      "text": "201 response time back to normal (<90 sec). Parts Used: Valve seat gasket kit (1x)",
+      "confidence": 0.990976,
+      "polygon": [
+        [
+          71,
+          595
+        ],
+        [
+          976,
+          595
+        ],
+        [
+          976,
+          619
+        ],
+        [
+          71,
+          619
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 595,
+        "width": 905,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r013",
+      "text": "Technician: Suresh Patil Downtime: 2.5 hrs Status: Closed",
+      "confidence": 0.993899,
+      "polygon": [
+        [
+          70,
+          631
+        ],
+        [
+          730,
+          631
+        ],
+        [
+          730,
+          654
+        ],
+        [
+          70,
+          654
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 631,
+        "width": 660,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r014",
+      "text": "WO-2024-0114",
+      "confidence": 0.999436,
+      "polygon": [
+        [
+          70,
+          751
+        ],
+        [
+          247,
+          751
+        ],
+        [
+          247,
+          775
+        ],
+        [
+          70,
+          775
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 751,
+        "width": 177,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r015",
+      "text": "Date: 15-Mar-2024 Equipment: P-101 Reported: Feed Pump A tripping intermittently on",
+      "confidence": 0.995938,
+      "polygon": [
+        [
+          69,
+          800
+        ],
+        [
+          1059,
+          800
+        ],
+        [
+          1059,
+          827
+        ],
+        [
+          69,
+          827
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 800,
+        "width": 990,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r016",
+      "text": "overload during startup. Investigation/Action: Motor amp draw checked \u2014 within spec.",
+      "confidence": 0.977623,
+      "polygon": [
+        [
+          70,
+          838
+        ],
+        [
+          1051,
+          838
+        ],
+        [
+          1051,
+          861
+        ],
+        [
+          70,
+          861
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 838,
+        "width": 981,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r017",
+      "text": "Suspected worn impeller bearing causing increased load. Switched over to P-102 (standby)",
+      "confidence": 0.999107,
+      "polygon": [
+        [
+          71,
+          873
+        ],
+        [
+          1081,
+          873
+        ],
+        [
+          1081,
+          897
+        ],
+        [
+          71,
+          897
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 873,
+        "width": 1010,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r018",
+      "text": "per XV-101/XV-102 changeover procedure. P-101 pulled for bearing inspection. Findings:",
+      "confidence": 0.999282,
+      "polygon": [
+        [
+          69,
+          908
+        ],
+        [
+          1066,
+          908
+        ],
+        [
+          1066,
+          935
+        ],
+        [
+          69,
+          935
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 908,
+        "width": 997,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r019",
+      "text": "Bearing showed early-stage pitting, consistent with normal wear at ~14,000 operating",
+      "confidence": 0.991682,
+      "polygon": [
+        [
+          68,
+          943
+        ],
+        [
+          1031,
+          944
+        ],
+        [
+          1031,
+          971
+        ],
+        [
+          68,
+          970
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 943,
+        "width": 963,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r020",
+      "text": "hours. Parts Used: Bearing set (SKF 6205), lubricant Tech: S. Patil Downtime: 4 hrs (P-101",
+      "confidence": 0.995257,
+      "polygon": [
+        [
+          70,
+          981
+        ],
+        [
+          1073,
+          981
+        ],
+        [
+          1073,
+          1005
+        ],
+        [
+          70,
+          1005
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 981,
+        "width": 1003,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r021",
+      "text": "offline, P-102 covering) Status: Closed",
+      "confidence": 0.997417,
+      "polygon": [
+        [
+          69,
+          1015
+        ],
+        [
+          500,
+          1016
+        ],
+        [
+          500,
+          1042
+        ],
+        [
+          69,
+          1041
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1015,
+        "width": 431,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r022",
+      "text": "WO-2024-0119",
+      "confidence": 0.998642,
+      "polygon": [
+        [
+          69,
+          1137
+        ],
+        [
+          246,
+          1137
+        ],
+        [
+          246,
+          1160
+        ],
+        [
+          69,
+          1160
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1137,
+        "width": 177,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r023",
+      "text": "Date: 22-Mar-2024 Equip Tag: PSV-201 Type: Scheduled Test Description: Annual pop-",
+      "confidence": 0.995261,
+      "polygon": [
+        [
+          69,
+          1185
+        ],
+        [
+          1053,
+          1185
+        ],
+        [
+          1053,
+          1212
+        ],
+        [
+          69,
+          1212
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1185,
+        "width": 984,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r024",
+      "text": "test of reactor relief valve per OISD-STD-118 requirement. Result: Set pressure verified at",
+      "confidence": 0.997409,
+      "polygon": [
+        [
+          69,
+          1222
+        ],
+        [
+          1064,
+          1222
+        ],
+        [
+          1064,
+          1248
+        ],
+        [
+          69,
+          1248
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1222,
+        "width": 995,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r025",
+      "text": "8.4 bar (spec: 8.0-8.5 bar). PASS. Performed By: Vikram Singh (Safety Officer), witnessed",
+      "confidence": 0.994036,
+      "polygon": [
+        [
+          69,
+          1257
+        ],
+        [
+          1068,
+          1257
+        ],
+        [
+          1068,
+          1284
+        ],
+        [
+          69,
+          1284
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1257,
+        "width": 999,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r026",
+      "text": "by M. Joshi Next Due: Mar-2025",
+      "confidence": 0.99741,
+      "polygon": [
+        [
+          69,
+          1295
+        ],
+        [
+          434,
+          1294
+        ],
+        [
+          434,
+          1319
+        ],
+        [
+          70,
+          1320
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1294,
+        "width": 365,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r027",
+      "text": "WO-2024-0122",
+      "confidence": 0.998426,
+      "polygon": [
+        [
+          69,
+          1415
+        ],
+        [
+          247,
+          1415
+        ],
+        [
+          247,
+          1438
+        ],
+        [
+          69,
+          1438
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1415,
+        "width": 178,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r028",
+      "text": "Date: O2-Apr-2024 Equipment: C-301 / Distillation Column Complaint: Operators reported",
+      "confidence": 0.986829,
+      "polygon": [
+        [
+          69,
+          1463
+        ],
+        [
+          1090,
+          1463
+        ],
+        [
+          1090,
+          1490
+        ],
+        [
+          69,
+          1490
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1463,
+        "width": 1021,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p001-r029",
+      "text": "unstable overhead pressure, PIC-301 hunting. Root Cause Found: PV-301 control valve",
+      "confidence": 0.997672,
+      "polygon": [
+        [
+          71,
+          1501
+        ],
+        [
+          1039,
+          1501
+        ],
+        [
+          1039,
+          1525
+        ],
+        [
+          71,
+          1525
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 1501,
+        "width": 968,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    }
+  ],
+  "region_count": 29,
+  "mean_confidence": 0.995173,
+  "duration_ms": 72583.52,
+  "review_state": "pending_review"
+}

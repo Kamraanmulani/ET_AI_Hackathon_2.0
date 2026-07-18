@@ -1,0 +1,942 @@
+{
+  "source_page": 3,
+  "rendered_image": "page_images/page-003.png",
+  "render_scale": 2.0,
+  "raw_text": "WO-2024-0158\nDate: 21-May-2024 Equipment: B-501 (Steam Boiler) Priority: HIGH Reported By: Ramesh\nIyer Symptom: LIC-501 alarm \u2014 boiler drum low-level trip occurred during shift. Boiler\nauto-shutdown per safety interlock. No injuries, no damage. Investigation: LV-501 feed\nwater control valve found stuck ~15% open due to scale buildup on valve trim, restricting\nadequate feed water flow to maintain drum level under load. Action Taken: LV-501\nremoved, trim cleaned and inspected, reinstalled. Feed water quality sampled \u2014 hardness\nslightly above spec, water treatment team notified separately (see related note WT-2024-\nO14). Parts: None (cleaning only) Technician: Suresh Patil, assisted by D. Rao Downtime: 6\nhrs (boiler offline for safe cooldown + repair) Status: Closed \u2014 RCA follow-up\nrecommended on feed water quality\nWO-2024-0163\nDate: 30-May-2024 Tag: PSV-501 Annual relief valve test. Set pressure verified within spec\n(per OISD requirement). Witnessed: V. Singh. Result: PASS. Next due May-2025.\nWO-2024-0170\nDate: O8-Jun-2024 Equipment: FV-501 (fuel control valve, Boiler House) Complaint: FIC-\n501 loop unable to maintain stable fuel flow, boiler flame \"hunting\" observed by operator.\nDiagnosis: Valve actuator diaphragm found cracked, causing erratic positioning. Action:\nActuator diaphragm replaced. Loop retuned. Flame stability confirmed over 2-hour\nobservation period post-repair. Parts Used: Diaphragm kit (Fisher-type) Technician: M.\nJoshi Downtime: 3.5 hrs Status: Closed\nWO-2024-0177\nDate: 19-Jun-2024 Equip: ETP-601 Routine \u2014 chemical dosing pump for treatment tank\nfound under-dosing due to partially blocked suction line. Line flushed, strainer cleaned.\nDosing rate verified back to spec (per AIT-601 readings pre/post). Tech: S. Patil Downtime: 1\nhr Status: Closed\nWO-2024-0183\nDate: 27-Jun-2024 Equipment: XV-603 (ETP discharge auto-close valve) Priority: HIGH \u2014\nSafety Interlock Related Reported: Monthly interlock test \u2014 AAH-601 high alarm\nsimulated, XV-603 auto-close function verified. Valve closed within 4 seconds of simulated",
+  "regions": [
+    {
+      "region_id": "p003-r001",
+      "text": "WO-2024-0158",
+      "confidence": 0.999814,
+      "polygon": [
+        [
+          70,
+          54
+        ],
+        [
+          249,
+          54
+        ],
+        [
+          249,
+          78
+        ],
+        [
+          70,
+          78
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 54,
+        "width": 179,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r002",
+      "text": "Date: 21-May-2024 Equipment: B-501 (Steam Boiler) Priority: HIGH Reported By: Ramesh",
+      "confidence": 0.995236,
+      "polygon": [
+        [
+          70,
+          104
+        ],
+        [
+          1089,
+          104
+        ],
+        [
+          1089,
+          128
+        ],
+        [
+          70,
+          128
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 104,
+        "width": 1019,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r003",
+      "text": "Iyer Symptom: LIC-501 alarm \u2014 boiler drum low-level trip occurred during shift. Boiler",
+      "confidence": 0.992648,
+      "polygon": [
+        [
+          69,
+          139
+        ],
+        [
+          1048,
+          139
+        ],
+        [
+          1048,
+          165
+        ],
+        [
+          69,
+          165
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 139,
+        "width": 979,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r004",
+      "text": "auto-shutdown per safety interlock. No injuries, no damage. Investigation: LV-501 feed",
+      "confidence": 0.989293,
+      "polygon": [
+        [
+          70,
+          176
+        ],
+        [
+          1044,
+          176
+        ],
+        [
+          1044,
+          200
+        ],
+        [
+          70,
+          200
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 176,
+        "width": 974,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r005",
+      "text": "water control valve found stuck ~15% open due to scale buildup on valve trim, restricting",
+      "confidence": 0.998076,
+      "polygon": [
+        [
+          68,
+          210
+        ],
+        [
+          1062,
+          211
+        ],
+        [
+          1062,
+          238
+        ],
+        [
+          68,
+          237
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 210,
+        "width": 994,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r006",
+      "text": "adequate feed water flow to maintain drum level under load. Action Taken: LV-501",
+      "confidence": 0.999186,
+      "polygon": [
+        [
+          69,
+          247
+        ],
+        [
+          993,
+          246
+        ],
+        [
+          994,
+          272
+        ],
+        [
+          69,
+          273
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 246,
+        "width": 925,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r007",
+      "text": "removed, trim cleaned and inspected, reinstalled. Feed water quality sampled \u2014 hardness",
+      "confidence": 0.994744,
+      "polygon": [
+        [
+          69,
+          284
+        ],
+        [
+          1073,
+          284
+        ],
+        [
+          1073,
+          308
+        ],
+        [
+          69,
+          308
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 284,
+        "width": 1004,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r008",
+      "text": "slightly above spec, water treatment team notified separately (see related note WT-2024-",
+      "confidence": 0.992822,
+      "polygon": [
+        [
+          69,
+          319
+        ],
+        [
+          1060,
+          318
+        ],
+        [
+          1060,
+          345
+        ],
+        [
+          69,
+          346
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 318,
+        "width": 991,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r009",
+      "text": "O14). Parts: None (cleaning only) Technician: Suresh Patil, assisted by D. Rao Downtime: 6",
+      "confidence": 0.995693,
+      "polygon": [
+        [
+          71,
+          356
+        ],
+        [
+          1087,
+          356
+        ],
+        [
+          1087,
+          380
+        ],
+        [
+          71,
+          380
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 356,
+        "width": 1016,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r010",
+      "text": "hrs (boiler offline for safe cooldown + repair) Status: Closed \u2014 RCA follow-up",
+      "confidence": 0.9958,
+      "polygon": [
+        [
+          67,
+          389
+        ],
+        [
+          939,
+          391
+        ],
+        [
+          939,
+          419
+        ],
+        [
+          67,
+          417
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 389,
+        "width": 872,
+        "height": 30
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r011",
+      "text": "recommended on feed water quality",
+      "confidence": 0.998581,
+      "polygon": [
+        [
+          67,
+          427
+        ],
+        [
+          475,
+          428
+        ],
+        [
+          475,
+          454
+        ],
+        [
+          67,
+          453
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 427,
+        "width": 408,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r012",
+      "text": "WO-2024-0163",
+      "confidence": 0.999801,
+      "polygon": [
+        [
+          70,
+          548
+        ],
+        [
+          250,
+          548
+        ],
+        [
+          250,
+          572
+        ],
+        [
+          70,
+          572
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 548,
+        "width": 180,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r013",
+      "text": "Date: 30-May-2024 Tag: PSV-501 Annual relief valve test. Set pressure verified within spec",
+      "confidence": 0.990679,
+      "polygon": [
+        [
+          68,
+          596
+        ],
+        [
+          1082,
+          597
+        ],
+        [
+          1082,
+          624
+        ],
+        [
+          68,
+          623
+        ]
+      ],
+      "bounding_box": {
+        "x": 68,
+        "y": 596,
+        "width": 1014,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r014",
+      "text": "(per OISD requirement). Witnessed: V. Singh. Result: PASS. Next due May-2025.",
+      "confidence": 0.99458,
+      "polygon": [
+        [
+          72,
+          634
+        ],
+        [
+          961,
+          634
+        ],
+        [
+          961,
+          660
+        ],
+        [
+          72,
+          660
+        ]
+      ],
+      "bounding_box": {
+        "x": 72,
+        "y": 634,
+        "width": 889,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r015",
+      "text": "WO-2024-0170",
+      "confidence": 0.999752,
+      "polygon": [
+        [
+          70,
+          754
+        ],
+        [
+          249,
+          754
+        ],
+        [
+          249,
+          778
+        ],
+        [
+          70,
+          778
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 754,
+        "width": 179,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r016",
+      "text": "Date: O8-Jun-2024 Equipment: FV-501 (fuel control valve, Boiler House) Complaint: FIC-",
+      "confidence": 0.981257,
+      "polygon": [
+        [
+          69,
+          804
+        ],
+        [
+          1073,
+          804
+        ],
+        [
+          1073,
+          828
+        ],
+        [
+          69,
+          828
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 804,
+        "width": 1004,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r017",
+      "text": "501 loop unable to maintain stable fuel flow, boiler flame \"hunting\" observed by operator.",
+      "confidence": 0.998168,
+      "polygon": [
+        [
+          70,
+          839
+        ],
+        [
+          1061,
+          839
+        ],
+        [
+          1061,
+          865
+        ],
+        [
+          70,
+          865
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 839,
+        "width": 991,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r018",
+      "text": "Diagnosis: Valve actuator diaphragm found cracked, causing erratic positioning. Action:",
+      "confidence": 0.99989,
+      "polygon": [
+        [
+          70,
+          876
+        ],
+        [
+          1060,
+          876
+        ],
+        [
+          1060,
+          900
+        ],
+        [
+          70,
+          900
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 876,
+        "width": 990,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r019",
+      "text": "Actuator diaphragm replaced. Loop retuned. Flame stability confirmed over 2-hour",
+      "confidence": 0.999767,
+      "polygon": [
+        [
+          69,
+          911
+        ],
+        [
+          999,
+          910
+        ],
+        [
+          999,
+          937
+        ],
+        [
+          69,
+          938
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 910,
+        "width": 930,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r020",
+      "text": "observation period post-repair. Parts Used: Diaphragm kit (Fisher-type) Technician: M.",
+      "confidence": 0.995027,
+      "polygon": [
+        [
+          70,
+          946
+        ],
+        [
+          1053,
+          946
+        ],
+        [
+          1053,
+          973
+        ],
+        [
+          70,
+          973
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 946,
+        "width": 983,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r021",
+      "text": "Joshi Downtime: 3.5 hrs Status: Closed",
+      "confidence": 0.99378,
+      "polygon": [
+        [
+          70,
+          984
+        ],
+        [
+          513,
+          984
+        ],
+        [
+          513,
+          1007
+        ],
+        [
+          70,
+          1007
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 984,
+        "width": 443,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r022",
+      "text": "WO-2024-0177",
+      "confidence": 0.999734,
+      "polygon": [
+        [
+          70,
+          1105
+        ],
+        [
+          246,
+          1105
+        ],
+        [
+          246,
+          1129
+        ],
+        [
+          70,
+          1129
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1105,
+        "width": 176,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r023",
+      "text": "Date: 19-Jun-2024 Equip: ETP-601 Routine \u2014 chemical dosing pump for treatment tank",
+      "confidence": 0.998946,
+      "polygon": [
+        [
+          67,
+          1151
+        ],
+        [
+          1055,
+          1152
+        ],
+        [
+          1055,
+          1179
+        ],
+        [
+          67,
+          1178
+        ]
+      ],
+      "bounding_box": {
+        "x": 67,
+        "y": 1151,
+        "width": 988,
+        "height": 28
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r024",
+      "text": "found under-dosing due to partially blocked suction line. Line flushed, strainer cleaned.",
+      "confidence": 0.998446,
+      "polygon": [
+        [
+          70,
+          1190
+        ],
+        [
+          1049,
+          1190
+        ],
+        [
+          1049,
+          1214
+        ],
+        [
+          70,
+          1214
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1190,
+        "width": 979,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r025",
+      "text": "Dosing rate verified back to spec (per AIT-601 readings pre/post). Tech: S. Patil Downtime: 1",
+      "confidence": 0.995509,
+      "polygon": [
+        [
+          69,
+          1224
+        ],
+        [
+          1087,
+          1224
+        ],
+        [
+          1087,
+          1250
+        ],
+        [
+          69,
+          1250
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1224,
+        "width": 1018,
+        "height": 26
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r026",
+      "text": "hr Status: Closed",
+      "confidence": 0.987188,
+      "polygon": [
+        [
+          69,
+          1261
+        ],
+        [
+          263,
+          1261
+        ],
+        [
+          263,
+          1285
+        ],
+        [
+          69,
+          1285
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1261,
+        "width": 194,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r027",
+      "text": "WO-2024-0183",
+      "confidence": 0.999918,
+      "polygon": [
+        [
+          69,
+          1381
+        ],
+        [
+          250,
+          1381
+        ],
+        [
+          250,
+          1408
+        ],
+        [
+          69,
+          1408
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1381,
+        "width": 181,
+        "height": 27
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r028",
+      "text": "Date: 27-Jun-2024 Equipment: XV-603 (ETP discharge auto-close valve) Priority: HIGH \u2014",
+      "confidence": 0.980743,
+      "polygon": [
+        [
+          70,
+          1432
+        ],
+        [
+          1086,
+          1432
+        ],
+        [
+          1086,
+          1455
+        ],
+        [
+          70,
+          1455
+        ]
+      ],
+      "bounding_box": {
+        "x": 70,
+        "y": 1432,
+        "width": 1016,
+        "height": 23
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r029",
+      "text": "Safety Interlock Related Reported: Monthly interlock test \u2014 AAH-601 high alarm",
+      "confidence": 0.996876,
+      "polygon": [
+        [
+          71,
+          1468
+        ],
+        [
+          983,
+          1468
+        ],
+        [
+          983,
+          1492
+        ],
+        [
+          71,
+          1492
+        ]
+      ],
+      "bounding_box": {
+        "x": 71,
+        "y": 1468,
+        "width": 912,
+        "height": 24
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    },
+    {
+      "region_id": "p003-r030",
+      "text": "simulated, XV-603 auto-close function verified. Valve closed within 4 seconds of simulated",
+      "confidence": 0.990488,
+      "polygon": [
+        [
+          69,
+          1504
+        ],
+        [
+          1082,
+          1503
+        ],
+        [
+          1082,
+          1527
+        ],
+        [
+          69,
+          1528
+        ]
+      ],
+      "bounding_box": {
+        "x": 69,
+        "y": 1503,
+        "width": 1013,
+        "height": 25
+      },
+      "coordinate_space": "rendered_page_pixels",
+      "review_state": "pending_review"
+    }
+  ],
+  "region_count": 30,
+  "mean_confidence": 0.995081,
+  "duration_ms": 61579.5,
+  "review_state": "pending_review"
+}

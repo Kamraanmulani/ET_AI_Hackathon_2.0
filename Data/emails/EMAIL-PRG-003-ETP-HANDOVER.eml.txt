@@ -1,0 +1,25 @@
+GENERATED SYNTHETIC DEMO DATA - NOT AN OFFICIAL PLANT DOCUMENT
+
+document_id: EMAIL-PRG-003-ETP-HANDOVER
+title: ETP Evidence-Handover Reminder
+document_type: internal_email
+synthetic: true
+generator: Pragyan Plant Intelligence demo corpus
+revision: 1.0
+effective_or_event_date: 2025-08-22
+owner_role: Shift Engineer
+related_asset_tags: [ETP-601, P-601, AIT-601]
+related_drawing_ids: [PCP-PID-005]
+confidentiality: Internal Demo
+review_status: Draft for Human Review
+
+From: shift.engineer@pragyan.demo
+To: etp.area.owner@pragyan.demo
+CC: maintenance.planner@pragyan.demo
+Subject: ETP evidence-handover reminder
+Date: 2025-08-22
+Classification: Internal Demo - Synthetic
+
+For the next record review, please include the outstanding ETP-601, P-601, and AIT-601 evidence references in the handover pack. The related training scenario remains open for human follow-up.
+
+References: NMR-PRG-ETP-001; INS-PRG-P601-001; INS-PRG-AIT601-001
