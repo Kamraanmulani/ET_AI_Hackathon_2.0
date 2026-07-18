@@ -1,0 +1,17 @@
+.venv/
+backend/.venv-api/
+.paddle-cache/
+__pycache__/
+*.py[cod]
+
+# Environment secrets — never commit
+.env
+backend/.env
+
+# Frontend build and deps
+frontend/node_modules/
+frontend/dist/
+
+# Python pytest / mypy caches
+.pytest_cache/
+.mypy_cache/
