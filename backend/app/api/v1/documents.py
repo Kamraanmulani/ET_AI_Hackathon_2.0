@@ -80,7 +80,7 @@ def list_catalogue_documents():
         drawing_ids = []
         for ent in entities:
             res = ent.get("resolution", {})
-            if res.get("state") == "verified":
+            if res.get("state") in ("verified", "ai_proposed"):
                 val = ent.get("normalized_value")
                 if val:
                     if ent.get("entity_type") == "asset_tag" and val not in asset_tags:
@@ -150,7 +150,7 @@ def get_document(document_id: str):
     asset_tags = []
     for ent in entities:
         res = ent.get("resolution", {})
-        if res.get("state") == "verified" and ent.get("entity_type") == "asset_tag":
+        if res.get("state") in ("verified", "ai_proposed") and ent.get("entity_type") == "asset_tag":
             val = ent.get("normalized_value")
             if val and val not in asset_tags:
                 asset_tags.append(val)

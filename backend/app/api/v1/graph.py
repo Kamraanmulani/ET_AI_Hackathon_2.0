@@ -11,6 +11,7 @@ import structlog
 from fastapi import APIRouter, Path
 
 from app.core.database import get_db
+from app.core.config import settings
 from app.services import neo4j_service
 
 log = structlog.get_logger(__name__)
@@ -122,5 +123,66 @@ def graph_health():
 
 @router.post("/reconcile")
 def graph_reconcile():
-    """Reconcile index counts (stub for R1)."""
-    return {"status": "reconciled", "details": "Outbox reconciliation triggered."}
+    """Reconcile index counts."""
+    db = get_db()
+    
+    mongo_docs = db.documents.count_documents({})
+    mongo_assets = db.assets.count_documents({})
+    mongo_entities = db.entities.count_documents({})
+    
+    neo4j_docs = 0
+    neo4j_assets = 0
+    neo4j_entities = 0
+    
+    driver = neo4j_service._get_driver()
+    neo4j_available = driver is not None
+    error_msg = None
+    if neo4j_available:
+        try:
+            with driver.session(database=settings.neo4j_database) as session:
+                neo4j_docs = session.run("MATCH (n:Document) RETURN count(n) AS c").single()["c"]
+                neo4j_assets = session.run("MATCH (n:Asset) RETURN count(n) AS c").single()["c"]
+                neo4j_entities = session.run("MATCH (n:Entity) RETURN count(n) AS c").single()["c"]
+        except Exception as e:
+            neo4j_available = False
+            error_msg = str(e)
+            log.warning("reconcile_neo4j_failed", error=str(e))
+            
+    outbox_pending = db.index_outbox.count_documents({"status": "pending"})
+    outbox_failed = db.index_outbox.count_documents({"status": "failed"})
+    outbox_dead_letter = db.index_outbox.count_documents({"status": "dead_letter"})
+    
+    # Calculate Parity
+    doc_parity = (mongo_docs == neo4j_docs)
+    asset_parity = (mongo_assets == neo4j_assets)
+    entity_parity = (mongo_entities == neo4j_entities)
+    
+    status = "green" if neo4j_available and doc_parity and asset_parity and entity_parity and outbox_pending == 0 else "red"
+    if not neo4j_available:
+        status = "degraded (neo4j offline)"
+        
+    return {
+        "status": status,
+        "error": error_msg,
+        "mongodb": {
+            "documents": mongo_docs,
+            "assets": mongo_assets,
+            "entities": mongo_entities
+        },
+        "neo4j": {
+            "available": neo4j_available,
+            "documents": neo4j_docs,
+            "assets": neo4j_assets,
+            "entities": neo4j_entities
+        },
+        "outbox": {
+            "pending": outbox_pending,
+            "failed": outbox_failed,
+            "dead_letter": outbox_dead_letter
+        },
+        "parity": {
+            "documents": doc_parity,
+            "assets": asset_parity,
+            "entities": entity_parity
+        }
+    }

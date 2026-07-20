@@ -1,0 +1,20 @@
+{
+  "aliases": [
+    {
+      "alias": "ETP601",
+      "canonical_tag": "ETP-601",
+      "reason": "Common missing dash in emails",
+      "reviewer": "admin",
+      "effective_date": "2026-07-20",
+      "evidence": "Observed in manual handover notes."
+    },
+    {
+      "alias": "P601",
+      "canonical_tag": "P-601",
+      "reason": "Missing dash",
+      "reviewer": "admin",
+      "effective_date": "2026-07-20",
+      "evidence": "Standard operator shorthand."
+    }
+  ]
+}

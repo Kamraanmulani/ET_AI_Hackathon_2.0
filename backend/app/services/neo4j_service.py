@@ -20,10 +20,12 @@ _neo4j_available = None  # None = not yet probed
 
 def _get_driver():
     global _driver, _neo4j_available
-    if _neo4j_available is False:
-        return None
     if _driver is not None:
-        return _driver
+        try:
+            _driver.verify_connectivity()
+            return _driver
+        except Exception:
+            _driver = None # Try reconnecting
     try:
         from neo4j import GraphDatabase  # type: ignore
         _driver = GraphDatabase.driver(
@@ -144,6 +146,87 @@ def upsert_drawing_node(drawing: dict) -> bool:
         return True
     except Exception as e:
         log.warning("neo4j_upsert_drawing_failed", error=str(e))
+        return False
+
+
+def upsert_document_node(document: dict) -> bool:
+    driver = _get_driver()
+    if driver is None:
+        return False
+    try:
+        with driver.session(database=settings.neo4j_database) as session:
+            session.run(
+                """
+                MERGE (d:Document {document_id: $document_id})
+                SET d.source_id = $source_id,
+                    d.document_type = $document_type,
+                    d.projection_version = $version
+                """,
+                document_id=document.get("document_id", document.get("source_id", "")),
+                source_id=document.get("source_id", ""),
+                document_type=document.get("document_type", ""),
+                version=PROJECTION_VERSION,
+            )
+        return True
+    except Exception as e:
+        log.warning("neo4j_upsert_document_failed", error=str(e))
+        return False
+
+
+def upsert_entity_node(entity: dict) -> bool:
+    driver = _get_driver()
+    if driver is None:
+        return False
+    try:
+        with driver.session(database=settings.neo4j_database) as session:
+            session.run(
+                """
+                MERGE (e:Entity {entity_id: $entity_id})
+                SET e.entity_type = $entity_type,
+                    e.value = $value,
+                    e.normalized_value = $normalized_value,
+                    e.document_id = $document_id,
+                    e.review_state = $review_state,
+                    e.projection_version = $version
+                """,
+                entity_id=entity.get("entity_id", ""),
+                entity_type=entity.get("entity_type", ""),
+                value=entity.get("value", ""),
+                normalized_value=entity.get("normalized_value", ""),
+                document_id=entity.get("document_id", ""),
+                review_state=entity.get("resolution", {}).get("state", "ai_proposed"),
+                version=PROJECTION_VERSION,
+            )
+        return True
+    except Exception as e:
+        log.warning("neo4j_upsert_entity_failed", error=str(e))
+        return False
+
+
+def upsert_document_references_asset(doc_id: str, tag: str, source_hash: str, review_state: str) -> bool:
+    driver = _get_driver()
+    if driver is None:
+        return False
+    try:
+        with driver.session(database=settings.neo4j_database) as session:
+            session.run(
+                """
+                MATCH (d:Document {document_id: $doc_id})
+                MATCH (a:Asset {tag: $tag})
+                MERGE (d)-[r:REFERENCES]->(a)
+                SET r.source_hash = $source_hash,
+                    r.review_state = $review_state,
+                    r.projection_version = $version
+                """,
+                doc_id=doc_id,
+                tag=tag,
+                source_hash=source_hash,
+                review_state=review_state,
+                version=PROJECTION_VERSION,
+            )
+        return True
+    except Exception as e:
+        log.warning("neo4j_doc_references_failed", error=str(e))
         return False
 
 

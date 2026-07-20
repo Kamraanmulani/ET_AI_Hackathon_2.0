@@ -60,7 +60,7 @@ class SpreadsheetAdapter(DocumentAdapter):
                 
                 evidence = EvidenceRecord(
                     evidence_id=evidence_id,
-                    document_id=source.relative_path, # Ideally source_id
+                    document_id=source.source_id,
                     source_hash=source.sha256,
                     text=row_text,
                     location=LocationMetadata(kind="sheet", sheet=sheet_name, row=row_idx),
@@ -95,7 +95,7 @@ class SpreadsheetAdapter(DocumentAdapter):
                 
                 evidence = EvidenceRecord(
                     evidence_id=evidence_id,
-                    document_id=source.relative_path,
+                    document_id=source.source_id,
                     source_hash=source.sha256,
                     text=row_text,
                     location=LocationMetadata(kind="sheet", sheet="csv", row=row_idx),
@@ -121,7 +121,7 @@ class SpreadsheetAdapter(DocumentAdapter):
                     value=val,
                     normalized_value=val.upper(),
                     evidence_id=evidence_id,
-                    document_id=source.relative_path,
+                    document_id=source.source_id,
                     resolution=ResolutionMetadata(state="verified", canonical_id=f"asset:{val.upper()}"),
                     extractor=ExtractorMetadata(name="spreadsheet_column", version="1.0", confidence=1.0)
                 )
@@ -133,7 +133,7 @@ class SpreadsheetAdapter(DocumentAdapter):
                     value=val,
                     normalized_value=val.upper(),
                     evidence_id=evidence_id,
-                    document_id=source.relative_path,
+                    document_id=source.source_id,
                     resolution=ResolutionMetadata(state="verified"),
                     extractor=ExtractorMetadata(name="spreadsheet_column", version="1.0", confidence=1.0)
                 )

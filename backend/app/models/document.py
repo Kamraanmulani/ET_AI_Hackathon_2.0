@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 
 
 class SourceMetadata(BaseModel):
+    source_id: str = Field(..., description="Stable source identifier")
     relative_path: str = Field(..., description="Data/inspections/... etc")
     sha256: str
     revision: int = Field(1)

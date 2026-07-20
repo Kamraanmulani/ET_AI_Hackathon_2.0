@@ -1,0 +1,5 @@
+# Local Phase 2 OCR baseline. Install only inside the project .venv.
+paddlepaddle>=3.0,<4
+paddleocr>=3.0,<4
+PyMuPDF>=1.24,<2
+opencv-python-headless>=4.10,<5

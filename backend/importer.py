@@ -105,6 +105,7 @@ def import_documents(db, dry_run: bool) -> dict:
         # Build R1 SourceMetadata
         ext = Path(s["path"]).suffix
         source_meta = SourceMetadata(
+            source_id=s["source_id"],
             relative_path=s["path"],
             sha256=s["sha256"],
             revision=1,
@@ -145,6 +146,17 @@ def import_documents(db, dry_run: bool) -> dict:
         if adapter:
             try:
                 result = adapter.extract(source_meta)
+                
+                # If the adapter didn't extract entities (like PDF/Email), run the global extractor
+                from app.services.extractor import EntityExtractorService
+                extractor = EntityExtractorService()
+                
+                if not result.entities and result.evidence:
+                    for ev in result.evidence:
+                        if ev.text and not ev.text.startswith("[Scanned image"):
+                            extracted_entities = extractor.extract_entities(ev.text, ev.evidence_id, s["source_id"])
+                            result.entities.extend(extracted_entities)
+                
                 if not dry_run:
                     for ev in result.evidence:
                         evidence_repo.upsert(ev)

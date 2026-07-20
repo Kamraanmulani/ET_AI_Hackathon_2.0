@@ -13,6 +13,7 @@ pytest-asyncio>=0.23,<1
 
 # Document Parsing
 openpyxl>=3.1.2,<4
+pymupdf>=1.24,<2
 
 # Document Parsing
 openpyxl>=3.1.2,<4
