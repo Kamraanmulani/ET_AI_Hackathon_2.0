@@ -11,6 +11,7 @@ import Asset360Page from './pages/Asset360Page';
 import ReviewPage from './pages/ReviewPage';
 import QueryPage from './pages/QueryPage';
 import CopilotPage from './pages/CopilotPage';
+import DocumentDetailPage from './pages/DocumentDetailPage';
 
 function Rail() {
   const location = useLocation();
@@ -77,6 +78,7 @@ function AppShell() {
           <Route path="/review" element={<ReviewPage />} />
           <Route path="/query" element={<QueryPage />} />
           <Route path="/copilot" element={<CopilotPage />} />
+          <Route path="/documents/:documentId" element={<DocumentDetailPage />} />
           <Route
             path="*"
             element={
