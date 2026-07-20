@@ -8,7 +8,7 @@ Both collections use 'verified' state because they come from the manual review.
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Literal
 
 from pydantic import BaseModel, Field
 
@@ -42,9 +42,16 @@ class AssetResponse(BaseModel):
 class RelationshipRecord(BaseModel):
     """P&ID process relationship stored in MongoDB `relationships` collection."""
 
+    relationship_id: Optional[str] = Field(None, description="Deterministic ID")
     from_tag: str
     relationship_type: str
     to_tag: str
-    source_id: str = Field(..., description="P&ID source_id that evidences this relationship")
+    source_id: str = Field(..., description="Source_id that evidences this relationship")
+    
+    evidence_ids: list[str] = Field(default_factory=list)
     state: str = "verified"
+    provenance: Literal["original", "synthetic_demo", "derived_ocr"] = Field("original")
+    created_by: str = Field("pid_registry")
+    source_hash: Optional[str] = None
+    
     imported_at: datetime = Field(default_factory=datetime.utcnow)
