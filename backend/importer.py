@@ -56,6 +56,10 @@ from app.repositories.asset_repo import AssetRepository
 from app.repositories.document_repo import DocumentRepository
 from app.repositories.ocr_repo import OcrRepository
 from app.repositories.review_repo import ReviewRepository
+from app.repositories.evidence_repo import EvidenceRepository
+from app.repositories.entity_repo import EntityRepository
+from app.adapters.registry import get_adapter_for_extension
+from app.models.document import SourceMetadata, IngestionMetadata
 
 configure_logging(settings.log_level)
 log = structlog.get_logger(__name__)
@@ -88,14 +92,36 @@ def import_documents(db, dry_run: bool) -> dict:
     data = json.loads(manifest_path.read_text(encoding="utf-8"))
     sources = data["sources"]
 
-    repo = DocumentRepository(db)
+    doc_repo = DocumentRepository(db)
+    evidence_repo = EvidenceRepository(db)
+    entity_repo = EntityRepository(db)
+    
     inserted = 0
     updated = 0
 
     for s in sources:
         dimensions = s.get("dimensions", {})
+        
+        # Build R1 SourceMetadata
+        ext = Path(s["path"]).suffix
+        source_meta = SourceMetadata(
+            relative_path=s["path"],
+            sha256=s["sha256"],
+            revision=1,
+            format=ext.lstrip("."),
+            document_class=s.get("document_type", "unknown"),
+            provenance=s["provenance"]
+        )
+        
+        ingestion_meta = IngestionMetadata(
+            state="extracted",
+            extractor="adapter_framework",
+            extractor_version="1.0"
+        )
+        
         record = DocumentRecord(
             source_id=s["source_id"],
+            document_id=s["source_id"],
             path=s["path"],
             document_type=s["document_type"],
             provenance=s["provenance"],
@@ -109,13 +135,49 @@ def import_documents(db, dry_run: bool) -> dict:
             extraction_state=s.get("extraction_state", "pending"),
             synthetic_notice_text=s.get("synthetic_notice_text"),
             immutable=s.get("immutable"),
+            source=source_meta,
+            ingestion=ingestion_meta,
+            locations=[]
         )
+        
+        # Extraction via Adapter
+        adapter = get_adapter_for_extension(ext)
+        if adapter:
+            try:
+                result = adapter.extract(source_meta)
+                if not dry_run:
+                    for ev in result.evidence:
+                        evidence_repo.upsert(ev)
+                    for ent in result.entities:
+                        entity_repo.upsert(ent)
+            except Exception as e:
+                log.error("extraction_failed", source=s["source_id"], error=str(e))
+                ingestion_meta.state = "failed"
+                ingestion_meta.warnings.append(str(e))
+        else:
+            # Unsupported extension
+            ingestion_meta.warnings.append(f"No adapter found for extension {ext}")
+            
         if not dry_run:
-            _, was_inserted = repo.upsert(record)
+            _, was_inserted = doc_repo.upsert(record)
             if was_inserted:
                 inserted += 1
             else:
                 updated += 1
+                
+            # Emit Outbox Event for indexing (transactional outbox)
+            from app.models.outbox import OutboxEventRecord
+            from app.core.identifiers import generate_id
+            
+            event = OutboxEventRecord(
+                event_id=generate_id("import", s["source_id"], s["sha256"]),
+                event_type="document_imported",
+                document_id=s["source_id"],
+                source_hash=s["sha256"]
+            )
+            from app.repositories.outbox_repo import OutboxRepository
+            outbox_repo = OutboxRepository(db)
+            outbox_repo.append(event)
 
     total = len(sources)
     log.info("documents_imported", total=total, inserted=inserted, updated=updated, dry_run=dry_run)
