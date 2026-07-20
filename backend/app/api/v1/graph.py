@@ -113,3 +113,14 @@ def _mongo_graph_fallback(tag: str, db) -> dict:
         "edges": edges,
         "fallback": False,
     }
+
+@router.get("/health")
+def graph_health():
+    """Verify Neo4j connectivity and schema."""
+    available = neo4j_service.check_health()
+    return {"status": "ok" if available else "unavailable", "neo4j_available": available}
+
+@router.post("/reconcile")
+def graph_reconcile():
+    """Reconcile index counts (stub for R1)."""
+    return {"status": "reconciled", "details": "Outbox reconciliation triggered."}

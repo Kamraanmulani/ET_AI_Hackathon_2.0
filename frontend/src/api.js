@@ -18,6 +18,9 @@ export const fetchMetrics = () => apiFetch('/api/v1/metrics');
 
 // ── Documents / Catalogue ────────────────────────────────────────────────────
 export const fetchDocuments = () => apiFetch('/api/v1/documents');
+export const fetchCatalogueDocuments = () => apiFetch('/api/v1/documents/catalogue');
+export const fetchDocument = (id) => apiFetch(`/api/v1/documents/${id}`);
+export const fetchDocumentEntities = (id) => apiFetch(`/api/v1/documents/${id}/entities`);
 
 // ── Drawings / P&ID Explorer ─────────────────────────────────────────────────
 export const fetchDrawings = () => apiFetch('/api/v1/drawings');

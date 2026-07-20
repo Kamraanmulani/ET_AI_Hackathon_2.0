@@ -15,14 +15,14 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 import structlog
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from app.core.config import settings
 from app.core.database import close_client, ensure_indexes, get_db, ping_db
 from app.core.logging import configure_logging
-from app.api.v1 import health, documents, assets, review, metrics, drawings, query, copilot, graph
+from app.api.v1 import health, documents, assets, review, metrics, drawings, query, copilot, graph, imports
 
 configure_logging(settings.log_level)
 log = structlog.get_logger(__name__)
@@ -112,16 +112,18 @@ def create_app() -> FastAPI:
         app.mount("/static/ocr-pages", StaticFiles(directory=str(_OCR_PAGE_DIR)), name="ocr_pages")
 
     # Register API v1 routes
-    api_prefix = "/api/v1"
-    app.include_router(health.router, prefix=api_prefix)
-    app.include_router(documents.router, prefix=api_prefix)
-    app.include_router(assets.router, prefix=api_prefix)
-    app.include_router(review.router, prefix=api_prefix)
-    app.include_router(metrics.router, prefix=api_prefix)
-    app.include_router(drawings.router, prefix=api_prefix)
-    app.include_router(query.router, prefix=api_prefix)
-    app.include_router(copilot.router, prefix=api_prefix)
-    app.include_router(graph.router, prefix=api_prefix)
+    api_router = APIRouter(prefix="/api/v1")
+    api_router.include_router(health.router)
+    api_router.include_router(documents.router)
+    api_router.include_router(assets.router)
+    api_router.include_router(review.router)
+    api_router.include_router(metrics.router)
+    api_router.include_router(drawings.router)
+    api_router.include_router(query.router)
+    api_router.include_router(copilot.router)
+    api_router.include_router(graph.router)
+    api_router.include_router(imports.router)
+    app.include_router(api_router)
 
     return app
 

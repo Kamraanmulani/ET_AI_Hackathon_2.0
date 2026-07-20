@@ -10,7 +10,12 @@ structlog>=24.2,<25
 rich>=13.7,<14
 pytest>=8.2,<9
 pytest-asyncio>=0.23,<1
-httpx2>=0.28,<1
+
+# Document Parsing
+openpyxl>=3.1.2,<4
+
+# Document Parsing
+openpyxl>=3.1.2,<4
 
 # RAG Copilot dependencies (Phase RAG-1 onwards)
 qdrant-client>=1.10,<2
