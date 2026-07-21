@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import App from '../App';
 import ErrorBoundary from '../ErrorBoundary';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -37,6 +37,8 @@ beforeEach(() => {
   }));
 });
 
+afterEach(() => cleanup());
+
 describe('Frontend Hardening Regression Tests', () => {
   it('renders the public landing page at the root route', () => {
     const queryClient = new QueryClient({
@@ -53,8 +55,8 @@ describe('Frontend Hardening Regression Tests', () => {
     );
 
     // Verify the public entry point renders without nesting a router.
-    expect(screen.getByText('Pragyan Plant Intelligence')).toBeInTheDocument();
-    expect(screen.getByText('Open Workspace')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Pragyan Plant Intelligence' })).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /Open Workspace/ })[0]).toHaveAttribute('href', '/overview');
   });
 
   it('keeps the operational workspace available at /overview', () => {
@@ -69,7 +71,7 @@ describe('Frontend Hardening Regression Tests', () => {
     );
 
     expect(screen.getByText('P&ID Explorer')).toBeInTheDocument();
-    expect(screen.getByText('Overview')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Overview' })).toBeInTheDocument();
   });
 
   it('renders ErrorBoundary fallback when a child component throws an error', () => {
@@ -103,6 +105,6 @@ describe('Frontend Hardening Regression Tests', () => {
     );
 
     // Wait and ensure the app loads skeleton or generic state rather than crashing completely
-    expect(screen.getByText('Pragyan Plant Intelligence')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Pragyan Plant Intelligence' })).toBeInTheDocument();
   });
 });
