@@ -224,10 +224,10 @@ def retrieve(
             raw_results = qdrant_service.search(
                 query_vector=vec,
                 top_k=settings.rag_vector_top_k,
+                exclude_conditions={"review_state": ["rejected", "unreadable"]},
             )
             for r in raw_results:
-                if r.get("review_state") not in EXCLUDED_STATES:
-                    qdrant_chunks.append(_normalize_chunk(r, score=r.get("qdrant_score", 0.0), source="qdrant"))
+                qdrant_chunks.append(_normalize_chunk(r, score=r.get("qdrant_score", 0.0), source="qdrant"))
             used_qdrant = True
         except OllamaUnavailableError:
             log.warning("retrieval_ollama_unavailable_falling_back_to_mongo")

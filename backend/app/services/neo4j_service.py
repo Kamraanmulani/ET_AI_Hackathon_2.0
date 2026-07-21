@@ -20,6 +20,8 @@ _neo4j_available = None  # None = not yet probed
 
 def _get_driver():
     global _driver, _neo4j_available
+    if _neo4j_available is False:
+        return None
     if _driver is not None:
         try:
             _driver.verify_connectivity()
@@ -445,7 +447,7 @@ def get_asset_evidence_graph(tag: str, max_hops: int = 2) -> dict:
 
 
 def get_connected_chunks(tag: str) -> list[str]:
-    """Return chunk_ids connected to an asset via Neo4j MENTIONS edges (for retrieval)."""
+    """Return chunk_ids connected to an asset via Neo4j MENTIONS edges (up to 2-hops for retrieval)."""
     driver = _get_driver()
     if driver is None:
         return []
@@ -453,9 +455,13 @@ def get_connected_chunks(tag: str) -> list[str]:
         with driver.session(database=settings.neo4j_database) as session:
             result = session.run(
                 """
-                MATCH (c:Chunk)-[:MENTIONS]->(a:Asset {tag: $tag})
-                WHERE c.review_state <> 'rejected' AND c.review_state <> 'unreadable'
-                RETURN c.chunk_id AS chunk_id
+                MATCH (a:Asset {tag: $tag})
+                OPTIONAL MATCH (c1:Chunk)-[:MENTIONS]->(a)
+                OPTIONAL MATCH (a)-[:RELATED_TO]-(b:Asset)
+                OPTIONAL MATCH (c2:Chunk)-[:MENTIONS]->(b)
+                WITH coalesce(c1.chunk_id, c2.chunk_id) AS chunk_id, coalesce(c1.review_state, c2.review_state) AS review_state
+                WHERE chunk_id IS NOT NULL AND review_state <> 'rejected' AND review_state <> 'unreadable'
+                RETURN DISTINCT chunk_id
                 LIMIT 20
                 """,
                 tag=tag,

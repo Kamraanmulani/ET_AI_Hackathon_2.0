@@ -28,13 +28,13 @@ log = structlog.get_logger(__name__)
 # ── Safety gate: prohibited request patterns ─────────────────────────────────
 SAFETY_PATTERNS = [
     # Plant control actions
-    r"\b(close|open|stop|start|trip|reset|acknowledge|silence)\s+(valve|pump|compressor|motor|alarm)\b",
+    r"\b(close|open|stop|start|trip|reset|acknowledge|silence)\s+(?:the\s+)?(valve|pump|compressor|motor|alarm|[A-Za-z]{1,4}-\d+)\b",
     r"\b(setpoint|interlock|override|inhibit|bypass)\b",
-    r"\bxv-\d+\s*(close|open|trip)\b",
+    r"\b[A-Za-z]{2,4}-\d+\s*(close|open|trip)\b",
     # Root cause / prediction
     r"\b(root\s*cause|failure\s*cause|caused?\s*(by|the)?|diagnos|predict|prognos)\b",
     # Compliance / regulatory
-    r"\b(oisd|osha|pssr|hazop|lopa|pha|complian|regulatory|audit\s+finding)\b",
+    r"\b(oisd|osha|pssr|hazop|lopa|pha|complian|regulatory|audit\s+finding|discharge\s+limit|emission\s+limit)\b",
     # Live data / sensor values
     r"\b(current\s+(pressure|temperature|flow|level|ppm|ph)|live\s+(reading|value|state|status))\b",
     r"\b(what\s+is\s+the\s+(pressure|temperature|flow|level|concentration|ph)\s+of)\b",

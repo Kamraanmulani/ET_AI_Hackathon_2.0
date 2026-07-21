@@ -125,6 +125,7 @@ def search(
     query_vector: list[float],
     top_k: int = 15,
     filter_conditions: dict | None = None,
+    exclude_conditions: dict | None = None,
 ) -> list[dict]:
     """
     Semantic search in Qdrant with optional metadata filters.
@@ -134,20 +135,31 @@ def search(
     if client is None:
         return []
     try:
-        from qdrant_client.models import Filter, FieldCondition, MatchValue  # type: ignore
+        from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchAny  # type: ignore
 
-        qdrant_filter = None
+        must_clauses = []
+        must_not_clauses = []
+        
         if filter_conditions:
-            must_clauses = []
             for field, value in filter_conditions.items():
                 if isinstance(value, list):
-                    # "review_state NOT IN [rejected, unreadable]"
-                    for v in value:
-                        must_clauses.append(FieldCondition(key=field, match=MatchValue(value=v)))
+                    must_clauses.append(FieldCondition(key=field, match=MatchAny(any=value)))
                 else:
                     must_clauses.append(FieldCondition(key=field, match=MatchValue(value=value)))
-            if must_clauses:
-                qdrant_filter = Filter(must=must_clauses)
+                    
+        if exclude_conditions:
+            for field, value in exclude_conditions.items():
+                if isinstance(value, list):
+                    must_not_clauses.append(FieldCondition(key=field, match=MatchAny(any=value)))
+                else:
+                    must_not_clauses.append(FieldCondition(key=field, match=MatchValue(value=value)))
+
+        qdrant_filter = None
+        if must_clauses or must_not_clauses:
+            qdrant_filter = Filter(
+                must=must_clauses if must_clauses else None,
+                must_not=must_not_clauses if must_not_clauses else None
+            )
 
         response = client.query_points(
             collection_name=settings.qdrant_collection,

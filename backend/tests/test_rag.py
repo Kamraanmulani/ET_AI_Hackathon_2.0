@@ -252,6 +252,7 @@ def test_qdrant_health_check_false_when_unavailable():
 def test_neo4j_returns_fallback_graph_when_unavailable():
     """get_asset_evidence_graph must return fallback=True when Neo4j is down."""
     from app.services import neo4j_service
+    neo4j_service.reset_driver()
     with patch.object(neo4j_service, '_neo4j_available', False):
         result = neo4j_service.get_asset_evidence_graph("ETP-601")
         assert result["available"] is False
@@ -261,6 +262,7 @@ def test_neo4j_returns_fallback_graph_when_unavailable():
 def test_neo4j_connected_chunks_returns_empty_when_unavailable():
     """get_connected_chunks must return [] when Neo4j is unavailable."""
     from app.services import neo4j_service
+    neo4j_service.reset_driver()
     with patch.object(neo4j_service, '_neo4j_available', False):
         result = neo4j_service.get_connected_chunks("ETP-601")
         assert result == []
