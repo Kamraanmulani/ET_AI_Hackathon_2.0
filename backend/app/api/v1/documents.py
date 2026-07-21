@@ -50,7 +50,7 @@ def _map_readiness(doc: dict, pending_reviews: int) -> str:
     
     if state == "failed":
         return "attention_needed"
-    if state in ("registered", "extracted", "pending"):
+    if state in ("registered", "pending"):
         return "processing"
     if state == "review_required":
         return "needs_review"
