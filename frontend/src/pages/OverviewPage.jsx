@@ -105,27 +105,8 @@ export default function OverviewPage() {
               <div className="metric-value">{md.review?.pending_tasks ?? '—'}</div>
               <div className="metric-label">Pending reviews</div>
             </div>
-            <div className="metric-card">
-              <div className="metric-value">{md.documents?.original ?? '—'}</div>
-              <div className="metric-label">Original sources</div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-value" style={{ color: 'var(--amber)' }}>
-                {md.documents?.synthetic_demo ?? '—'}
-              </div>
-              <div className="metric-label">Synthetic-demo documents</div>
-            </div>
           </div>
 
-          <div className="panel">
-            <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
-              <strong>Data provenance note:</strong> Original P&amp;ID images and the scanned
-              work-order PDF are the authoritative sources. All other documents in this corpus are
-              synthetic demo records — clearly labelled throughout the application.
-              OCR-extracted fields are <span className="badge badge-proposed">AI proposed</span> until
-              reviewed by a human.
-            </p>
-          </div>
         </>
       )}
     </div>
