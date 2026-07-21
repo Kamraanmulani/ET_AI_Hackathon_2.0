@@ -10,8 +10,6 @@ The product is built around a simple promise:
 
 It is a **read-only decision-support prototype** for Pragyan Chemical Plant. It does not control equipment, issue setpoints, use live sensor data, or make autonomous safety, maintenance, compliance, or root-cause decisions.
 
-![Pragyan P&ID Explorer](frontend/public/screenshots/step1-pid.png)
-
 ## The Problem
 
 Plant knowledge is rarely stored in one place. Engineers lose time moving between P&IDs, maintenance work orders, inspection records, procedures, incident reports, and handover communications. The result is not only slower information access; it makes it harder to understand the full evidence trail around an asset.
@@ -62,8 +60,6 @@ The **Expert Knowledge Copilot** is a local, evidence-grounded RAG workflow for 
 - Labels evidence support and review state rather than inventing certainty.
 - Returns `Insufficient Evidence` when records do not support an answer.
 - Enforces safety boundaries for plant-control requests, live values, setpoints, alarms, root-cause conclusions, predictions, and compliance determinations.
-
-![Pragyan Asset 360](frontend/public/screenshots/step2-asset360.png)
 
 ## Evaluation Alignment
 
