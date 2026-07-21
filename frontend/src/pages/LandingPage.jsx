@@ -78,7 +78,6 @@ export default function LandingPage() {
               <Link className="landing-button landing-button-primary" to="/overview">Open Workspace <ArrowRight size={18} aria-hidden="true" /></Link>
               <Link className="landing-button landing-button-secondary" to="/assets/ETP-601">Explore Asset Intelligence <ChevronRight size={18} aria-hidden="true" /></Link>
             </div>
-            <p className="landing-trust-line">Source-grounded answers. Inspectable evidence. Engineer review.</p>
           </div>
         </section>
 

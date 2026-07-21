@@ -1129,7 +1129,7 @@ code, .mono {
 .landing-inline-link { gap: 7px; width: fit-content; margin-top: 24px; color: var(--teal); font-size: 14px; font-weight: 650; text-decoration: none; }
 .landing-inline-link:hover, .landing-inline-link:focus-visible { color: #066d78; text-decoration: underline; }
 .landing-preview-image-wrap { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
-.landing-preview-image { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.landing-preview-image { display: block; width: 100%; height: auto; object-fit: contain; object-position: top; }
 .landing-evidence-path { margin-top: 24px; color: var(--text-secondary); font-family: var(--font-mono); font-size: 12px; }
 .landing-evidence-path span { color: var(--teal); margin: 0 7px; }
 
@@ -1209,7 +1209,7 @@ code, .mono {
   .landing-preview-tabs { width: 100%; overflow-x: auto; }
   .landing-preview-tabs button { flex: 0 0 auto; }
   .landing-preview-stage { gap: 24px; }
-  .landing-preview-image { aspect-ratio: 4 / 3; }
+
   .landing-capability-grid { grid-template-columns: 1fr; }
   .landing-capability { min-height: 0; }
   .landing-field-list div { grid-template-columns: 1fr; gap: 4px; }
