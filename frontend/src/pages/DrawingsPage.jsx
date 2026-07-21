@@ -29,8 +29,8 @@ function PidOverlay({ overlays, imageSize, onTagClick }) {
         const x = ov.x_pct * imageSize.w;
         const y = ov.y_pct * imageSize.h;
         const labelLen = ov.tag.length;
-        const bw = labelLen * 7 + 10;
-        const bh = 18;
+        const bw = labelLen * 18 + 24;
+        const bh = 40;
         return (
           <g
             key={ov.tag}
@@ -52,9 +52,9 @@ function PidOverlay({ overlays, imageSize, onTagClick }) {
             <text
               className="pid-tag-text"
               x={x}
-              y={y + 4}
+              y={y + 10}
               textAnchor="middle"
-              fontSize="11"
+              fontSize="30"
               fontFamily="IBM Plex Mono, monospace"
               fontWeight="600"
             >
