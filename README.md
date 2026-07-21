@@ -1,8 +1,10 @@
-# Pragyan Plant Intelligence
+# AI for Industrial Knowledge Intelligence: Unified Asset & Operations Brain
 
-### Industrial Knowledge Intelligence for Evidence-Backed Engineering Decisions
+### Pragyan Plant Intelligence
 
-Pragyan Plant Intelligence is an AI-powered knowledge workspace built for the **ET AI Hackathon**. It brings fragmented plant information into one connected, inspectable experience: engineering drawings, work orders, SOPs, inspection reports, incidents, handovers, and structured maintenance records.
+![Diagram](Data/Diagram.png)
+
+Pragyan Plant Intelligence is an AI-powered knowledge workspace built for the **ET AI Hackathon 2.0**. It brings fragmented plant information into one connected, inspectable experience: engineering drawings, work orders, SOPs, inspection reports, incidents, handovers, and structured maintenance records.
 
 The product is built around a simple promise:
 
