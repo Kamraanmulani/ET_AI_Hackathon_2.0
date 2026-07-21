@@ -8,8 +8,6 @@ The product is built around a simple promise:
 
 > Move from an asset tag or engineering question to evidence you can inspect, review, and trust.
 
-It is a **read-only decision-support prototype** for Pragyan Chemical Plant. It does not control equipment, issue setpoints, use live sensor data, or make autonomous safety, maintenance, compliance, or root-cause decisions.
-
 ## The Problem
 
 Plant knowledge is rarely stored in one place. Engineers lose time moving between P&IDs, maintenance work orders, inspection records, procedures, incident reports, and handover communications. The result is not only slower information access; it makes it harder to understand the full evidence trail around an asset.
