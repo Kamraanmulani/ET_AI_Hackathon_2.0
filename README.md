@@ -275,4 +275,4 @@ When evidence is missing, weak, rejected, or outside the product boundary, the s
 
 ---
 
-Built for the **ET AI Hackathon**: industrial knowledge that engineers can trace, review, and use.
+Built for the **ET AI Hackathon 2.0**: industrial knowledge that engineers can trace, review, and use.
