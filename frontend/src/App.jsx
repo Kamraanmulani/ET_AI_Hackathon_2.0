@@ -52,14 +52,7 @@ function Topbar() {
       <span className="text-muted text-small" style={{ marginLeft: 16 }}>
         Source-grounded asset knowledge workspace
       </span>
-      <div style={{ marginLeft: 'auto' }}>
-        <span
-          className="badge badge-synthetic"
-          title="Prototype — read-only decision support; not a plant control system"
-        >
-          Prototype · Read-only
-        </span>
-      </div>
+
     </header>
   );
 }
