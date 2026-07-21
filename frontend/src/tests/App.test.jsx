@@ -4,7 +4,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import App from '../App';
 import ErrorBoundary from '../ErrorBoundary';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 
 // Setup Mock for window.fetch
 beforeEach(() => {
@@ -38,7 +38,7 @@ beforeEach(() => {
 });
 
 describe('Frontend Hardening Regression Tests', () => {
-  it('renders the App layout without throwing nested router errors', () => {
+  it('renders the public landing page at the root route', () => {
     const queryClient = new QueryClient({
       defaultOptions: { queries: { retry: false } },
     });
@@ -46,15 +46,30 @@ describe('Frontend Hardening Regression Tests', () => {
     // Render the App component wrapped inside QueryClient and BrowserRouter (like main.jsx does)
     render(
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <MemoryRouter initialEntries={['/']}>
           <App />
-        </BrowserRouter>
+        </MemoryRouter>
       </QueryClientProvider>
     );
 
-    // Verify it renders Topbar and Rail navigation successfully
+    // Verify the public entry point renders without nesting a router.
     expect(screen.getByText('Pragyan Plant Intelligence')).toBeInTheDocument();
+    expect(screen.getByText('Open Workspace')).toBeInTheDocument();
+  });
+
+  it('keeps the operational workspace available at /overview', () => {
+    const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+
+    render(
+      <QueryClientProvider client={queryClient}>
+        <MemoryRouter initialEntries={['/overview']}>
+          <App />
+        </MemoryRouter>
+      </QueryClientProvider>
+    );
+
     expect(screen.getByText('P&ID Explorer')).toBeInTheDocument();
+    expect(screen.getByText('Overview')).toBeInTheDocument();
   });
 
   it('renders ErrorBoundary fallback when a child component throws an error', () => {
