@@ -20,8 +20,6 @@ _neo4j_available = None  # None = not yet probed
 
 def _get_driver():
     global _driver, _neo4j_available
-    if _neo4j_available is False:
-        return None
     if _driver is not None:
         try:
             _driver.verify_connectivity()
