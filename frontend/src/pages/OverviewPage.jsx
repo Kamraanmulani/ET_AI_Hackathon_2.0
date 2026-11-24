@@ -29,7 +29,7 @@ export default function OverviewPage() {
     <div>
       <h1 style={{ marginBottom: 4 }}>Overview</h1>
       <p className="text-muted" style={{ marginBottom: 24 }}>
-        Pragyan Plant Intelligence — source-grounded asset knowledge workspace
+        Pragyan Plant Intelligence: source-grounded asset knowledge workspace
       </p>
 
       {/* System health */}

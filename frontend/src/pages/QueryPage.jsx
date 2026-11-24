@@ -5,6 +5,7 @@
 // No LLM calls, no Qdrant, no external data.
 import { useState } from 'react';
 import { fetchQuery } from '../api';
+import { AlertTriangle } from 'lucide-react';
 
 const STATE_BADGE = {
   pending_review: { cls: 'badge-pending', label: 'Pending review' },
@@ -25,9 +26,9 @@ function CitationCard({ citation, index }) {
         <span className="text-muted text-small" style={{ fontWeight: 700 }}>#{index + 1}</span>
         <span className="citation-source">
           {citation.source_id}
-          {citation.source_page && ` · Page ${citation.source_page}`}
+          {citation.source_page && <span style={{ marginLeft: 8 }}>Page {citation.source_page}</span>}
           {citation.source_region_id && (
-            <> · <code className="mono">{citation.source_region_id}</code></>
+            <span style={{ marginLeft: 8 }}><code className="mono">{citation.source_region_id}</code></span>
           )}
         </span>
         <StateBadge state={citation.review_state || citation.state} />
@@ -65,7 +66,7 @@ function CitationCard({ citation, index }) {
             rel="noreferrer"
             className="link-btn"
           >
-            Open source page ↗
+            Open source page
           </a>
         </div>
       )}
@@ -105,8 +106,8 @@ export default function QueryPage() {
       </div>
       <p className="text-muted text-small" style={{ marginBottom: 16 }}>
         Search the active corpus for cited evidence. Results show source documents, page numbers,
-        and review state. Returns "insufficient evidence" when nothing matches.
-        No LLM, no Qdrant — pure source-grounded search.
+        and review state. Returns “insufficient evidence” when nothing matches.
+        No LLM, no Qdrant: pure source-grounded search.
       </p>
 
       <form onSubmit={handleSearch}>
@@ -164,13 +165,13 @@ export default function QueryPage() {
                 </h2>
                 <span className="text-muted text-small">
                   for &ldquo;{result.query}&rdquo;
-                  {result.asset_tag ? ` · asset: ${result.asset_tag}` : ''}
+                  {result.asset_tag ? `, asset ${result.asset_tag}` : ''}
                 </span>
               </div>
 
-              <div className="panel" style={{ padding: '8px 12px', marginBottom: 16, background: '#FFFBEB' }}>
+              <div className="panel" style={{ padding: '8px 12px', marginBottom: 16, background: 'var(--notice-bg)' }}>
                 <span className="text-muted text-small">
-                  ⚠ {result.provenance_note}
+                  <AlertTriangle size={12} className="icon-inline" aria-hidden="true" />{result.provenance_note}
                 </span>
               </div>
 

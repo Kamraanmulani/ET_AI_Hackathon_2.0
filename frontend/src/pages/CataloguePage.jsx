@@ -7,13 +7,13 @@ import { ChevronRight, FileText, Settings, AlertTriangle, MessageSquare, Clipboa
 import { useNavigate } from 'react-router-dom';
 
 const TYPE_ICONS = {
-  drawings: <Settings className="w-4 h-4" />,
-  maintenance: <Settings className="w-4 h-4" />,
-  inspections: <Clipboard className="w-4 h-4" />,
-  safety_procedures: <FileText className="w-4 h-4" />,
-  incidents: <AlertTriangle className="w-4 h-4" />,
-  communications: <MessageSquare className="w-4 h-4" />,
-  other: <File className="w-4 h-4" />,
+  drawings: <Settings size={16} aria-hidden="true" />,
+  maintenance: <Settings size={16} aria-hidden="true" />,
+  inspections: <Clipboard size={16} aria-hidden="true" />,
+  safety_procedures: <FileText size={16} aria-hidden="true" />,
+  incidents: <AlertTriangle size={16} aria-hidden="true" />,
+  communications: <MessageSquare size={16} aria-hidden="true" />,
+  other: <File size={16} aria-hidden="true" />,
 };
 
 const READINESS_MAP = {
@@ -125,7 +125,7 @@ export default function CataloguePage() {
                   <td title={doc.display_type}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                       {TYPE_ICONS[doc.category] || TYPE_ICONS.other}
-                      <span className="text-gray-800" style={{ fontSize: 13, fontWeight: 500 }}>
+                      <span className="cell-strong">
                         {doc.display_type}
                       </span>
                     </div>
@@ -138,20 +138,19 @@ export default function CataloguePage() {
                       {doc.asset_tags.slice(0, 2).map(tag => (
                         <span 
                           key={tag} 
-                          className="badge badge-neutral" 
-                          style={{ cursor: 'pointer', border: '1px solid #d1d5db' }}
+                          className="badge badge-neutral badge-clickable"
                           onClick={(e) => { e.stopPropagation(); navigate(`/assets/${tag}`); }}
                         >
-                          <Box className="w-3 h-3 inline mr-1 opacity-60" />
+                          <Box size={12} className="icon-inline" aria-hidden="true" />
                           {tag}
                         </span>
                       ))}
                       {doc.asset_tags.length > 2 && (
-                        <span className="badge badge-neutral text-xs opacity-70">
+                        <span className="badge badge-neutral">
                           +{doc.asset_tags.length - 2}
                         </span>
                       )}
-                      {doc.asset_tags.length === 0 && <span className="text-muted text-xs">—</span>}
+                      {doc.asset_tags.length === 0 && <span className="text-muted text-small">None</span>}
                     </div>
                   </td>
                   <td className="text-muted" style={{ fontSize: 13 }}>
@@ -166,7 +165,7 @@ export default function CataloguePage() {
                       onClick={(e) => { e.stopPropagation(); navigate(doc.open_target); }}
                       title="Open Record"
                     >
-                      <ChevronRight className="w-5 h-5 text-gray-400 hover:text-gray-700" />
+                      <ChevronRight size={20} aria-hidden="true" />
                     </button>
                   </td>
                 </tr>
@@ -180,7 +179,7 @@ export default function CataloguePage() {
           {filtered.map((doc) => (
             <div 
               key={doc.record_id} 
-              className="p-4 border-b border-gray-100 active:bg-gray-50 flex justify-between items-center"
+              className="catalogue-mobile-row"
               style={{ padding: '16px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
               onClick={() => navigate(doc.open_target)}
             >
@@ -210,7 +209,7 @@ export default function CataloguePage() {
                   <span className="text-small text-muted">{doc.document_date}</span>
                 </div>
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-400" />
+              <ChevronRight size={20} aria-hidden="true" style={{ color: 'var(--text-muted)' }} />
             </div>
           ))}
         </div>

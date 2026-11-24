@@ -68,7 +68,7 @@ function WorkOrderLinks({ links }) {
   if (!links?.length) {
     return (
       <div className="no-evidence">
-        No linked evidence — no work-order records linked to this asset in the active corpus.
+        No linked evidence: no work-order records are linked to this asset in the active corpus.
       </div>
     );
   }
@@ -85,9 +85,9 @@ function WorkOrderLinks({ links }) {
           )}
           <div className="evidence-meta">
             <span>Source: <code className="mono">{link.source_id}</code></span>
-            {link.source_page && <span>· Page {link.source_page}</span>}
+            {link.source_page && <span>Page {link.source_page}</span>}
             {link.source_region_id && (
-              <span>· Region <code className="mono">{link.source_region_id}</code></span>
+              <span>Region <code className="mono">{link.source_region_id}</code></span>
             )}
             {link.ocr_region?.confidence && (
               <ConfBar value={link.ocr_region.confidence} />
@@ -100,7 +100,7 @@ function WorkOrderLinks({ links }) {
                 className="link-btn"
                 style={{ marginLeft: 4 }}
               >
-                Open source page ↗
+                Open source page
               </a>
             )}
           </div>
@@ -133,7 +133,7 @@ function OcrRegionsPanel({ regions }) {
                 rel="noreferrer"
                 className="link-btn"
               >
-                Open page ↗
+                Open page
               </a>
             )}
           </div>
@@ -205,7 +205,7 @@ export default function Asset360Page() {
         <br />{error.message}
       </div>
       <Link to="/drawings" className="link-btn" style={{ marginTop: 12, display: 'inline-block' }}>
-        ← Back to P&amp;ID Explorer
+        Back to P&amp;ID Explorer
       </Link>
     </div>
   );
@@ -229,8 +229,8 @@ export default function Asset360Page() {
           {asset?.source_id && (
             <code className="mono text-muted" style={{ fontSize: 12 }}>{asset.source_id}</code>
           )}
-          <Link to={`/copilot?asset=${asset?.tag || tagUpper}`} className="btn btn-primary" style={{ textDecoration: 'none', background: 'var(--teal)', color: '#fff' }}>
-            Ask Copilot ⚗️
+          <Link to={`/copilot?asset=${asset?.tag || tagUpper}`} className="btn btn-primary">
+            Ask Copilot
           </Link>
           <Link to="/drawings" className="btn btn-outline" style={{ textDecoration: 'none' }}>
             View in P&amp;ID Explorer
@@ -287,7 +287,7 @@ export default function Asset360Page() {
             <span className="badge badge-proposed" style={{ marginLeft: 8 }}>AI proposed</span>
           </div>
           <p className="text-muted text-small" style={{ marginBottom: 10 }}>
-            Linked OCR extractions — pending human review. No claim is verified automatically.
+            Linked OCR extractions, pending human review. No claim is verified automatically.
           </p>
           <WorkOrderLinks links={work_order_links} />
         </div>

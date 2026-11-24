@@ -80,7 +80,7 @@ function TaskRow({ task }) {
         onKeyDown={(e) => e.key === 'Enter' && setOpen((o) => !o)}
       >
         <span style={{ width: 24, color: 'var(--text-muted)' }}>{open ? '▾' : '▸'}</span>
-        <span className="badge" style={{ background: '#F3F4F6', color: 'var(--text-secondary)', fontSize: 11 }}>
+        <span className="badge" style={{ background: 'var(--muted-fill)', color: 'var(--text-secondary)', fontSize: 11 }}>
           {TASK_TYPE_LABELS[task.task_type] || task.task_type}
         </span>
         <code className="mono" style={{ fontSize: 12 }}>{task.task_id}</code>
@@ -294,7 +294,7 @@ export default function ReviewPage() {
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
           >
-            ← Prev
+            Previous
           </button>
           <span className="text-muted text-small">
             Page {page} of {totalPages}
@@ -304,7 +304,7 @@ export default function ReviewPage() {
             onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
             disabled={page === totalPages}
           >
-            Next →
+            Next
           </button>
         </div>
       )}

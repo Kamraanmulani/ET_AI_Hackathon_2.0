@@ -10,11 +10,14 @@ import {
   MarkerType,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { Network, Filter } from 'lucide-react';
+import { AlertTriangle, Network, Filter } from 'lucide-react';
+
+// Edge colours come from the token block so the graph follows the theme.
+const token = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
 function ProvenanceBadge({ provenance, reviewState }) {
   if (provenance === 'synthetic_demo') {
-    return <span className="badge" style={{ background: '#dbeafe', color: '#1e40af', border: '1px solid #bfdbfe' }}>⚠ Synthetic Demo</span>;
+    return <span className="badge badge-demo"><AlertTriangle size={12} aria-hidden="true" />Synthetic Demo</span>;
   }
   if (provenance === 'original') {
     return <span className="badge badge-verified">Original</span>;
@@ -31,22 +34,22 @@ import { fetchAssetEvidenceGraph } from '../api';
 // Custom Nodes
 const AssetNode = ({ data }) => {
   return (
-    <div className="px-6 py-4 rounded-xl border-4 border-teal-500 bg-white shadow-lg text-center font-bold text-xl min-w-[150px]">
-      <Handle type="target" position={Position.Top} className="!bg-teal-500" />
-      <div className="text-teal-700">{data.label}</div>
-      <div className="text-sm font-normal text-gray-500 mt-1 uppercase tracking-wider">Target Asset</div>
-      <Handle type="source" position={Position.Bottom} className="!bg-teal-500" />
+    <div className="graph-node-asset">
+      <Handle type="target" position={Position.Top} className="graph-handle-asset" />
+      <div className="graph-node-title">{data.label}</div>
+      <div className="graph-node-sub">Target asset</div>
+      <Handle type="source" position={Position.Bottom} className="graph-handle-asset" />
     </div>
   );
 };
 
 const DocumentNode = ({ data }) => {
   return (
-    <div className="px-4 py-3 rounded-lg border border-gray-200 bg-white shadow-md max-w-[250px]">
-      <Handle type="target" position={Position.Top} className="!bg-gray-400" />
-      <div className="font-medium text-gray-800 text-sm mb-2 break-words">{data.label}</div>
+    <div className="graph-node-doc">
+      <Handle type="target" position={Position.Top} className="graph-handle-doc" />
+      <div className="graph-node-title">{data.label}</div>
       <ProvenanceBadge provenance={data.provenance} reviewState={data.review_state} />
-      <Handle type="source" position={Position.Bottom} className="!bg-gray-400" />
+      <Handle type="source" position={Position.Bottom} className="graph-handle-doc" />
     </div>
   );
 };
@@ -114,6 +117,7 @@ export default function AssetEvidenceGraph({ tag, onNodeClick }) {
     });
 
     // Edges
+    const colours = { proposed: token('--amber'), synthetic: token('--blue'), verified: token('--green') };
     filteredEdges.forEach(edge => {
       const isProposed = edge.state === 'pending_review';
       const isSynthetic = edge.evidence_basis.includes('Synthetic');
@@ -124,16 +128,16 @@ export default function AssetEvidenceGraph({ tag, onNodeClick }) {
         label: edge.evidence_basis,
         animated: isProposed,
         style: {
-          stroke: isProposed ? '#eab308' : (isSynthetic ? '#3b82f6' : '#10b981'),
+          stroke: isProposed ? colours.proposed : (isSynthetic ? colours.synthetic : colours.verified),
           strokeWidth: 2,
           strokeDasharray: isProposed ? '5,5' : 'none'
         },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: isProposed ? '#eab308' : (isSynthetic ? '#3b82f6' : '#10b981'),
+          color: isProposed ? colours.proposed : (isSynthetic ? colours.synthetic : colours.verified),
         },
-        labelStyle: { fill: '#4b5563', fontSize: 11, fontWeight: 500 },
-        labelBgStyle: { fill: '#ffffff', fillOpacity: 0.8 },
+        labelStyle: { fill: 'var(--text-secondary)', fontSize: 11, fontWeight: 500 },
+        labelBgStyle: { fill: 'var(--panel)', fillOpacity: 0.8 },
       });
     });
 
@@ -150,35 +154,35 @@ export default function AssetEvidenceGraph({ tag, onNodeClick }) {
     setEdges(initialEdges);
   }, [initialNodes, initialEdges, setNodes, setEdges]);
 
-  if (isLoading) return <div className="h-96 flex items-center justify-center text-gray-500">Loading graph...</div>;
-  if (error) return <div className="h-96 flex items-center justify-center text-red-500">Error loading graph</div>;
+  if (isLoading) return <div className="graph-state">Loading graph…</div>;
+  if (error) return <div className="graph-state is-error">Error loading graph</div>;
 
   return (
-    <div style={{ height: '600px', minHeight: '600px', display: 'flex', flexDirection: 'column', border: '1px solid #e5e7eb', borderRadius: '0.75rem', backgroundColor: '#f9fafb', overflow: 'hidden', position: 'relative' }}>
-      <div style={{ backgroundColor: '#fff', padding: '12px 16px', borderBottom: '1px solid #e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 10, boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)' }}>
+    <div className="graph-frame">
+      <div className="graph-toolbar">
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Network className="w-5 h-5 text-teal-600" />
-          <h3 className="font-semibold text-gray-800" style={{ margin: 0 }}>Asset Evidence Graph</h3>
+          <Network size={18} aria-hidden="true" style={{ color: 'var(--teal)' }} />
+          <h3>Asset Evidence Graph</h3>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Filter className="w-4 h-4 text-gray-500" />
-            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+            <Filter size={16} aria-hidden="true" style={{ color: 'var(--text-muted)' }} />
+            <label>
               <input 
                 type="checkbox" 
                 checked={!excludeProposed} 
                 onChange={e => setExcludeProposed(!e.target.checked)}
               />
-              <span className="text-gray-700">Include Proposed OCR</span>
+              <span>Include Proposed OCR</span>
             </label>
           </div>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+          <label>
             <input 
               type="checkbox" 
               checked={!excludeSynthetic} 
               onChange={e => setExcludeSynthetic(!e.target.checked)}
             />
-            <span className="text-gray-700">Include Synthetic Data</span>
+            <span>Include Synthetic Data</span>
           </label>
         </div>
       </div>
@@ -196,9 +200,11 @@ export default function AssetEvidenceGraph({ tag, onNodeClick }) {
           }}
           nodeTypes={nodeTypes}
           fitView
+          zoomOnScroll={false}
+          preventScrolling={false}
           attributionPosition="bottom-left"
         >
-          <Background color="#ccc" gap={16} />
+          <Background color="var(--border)" gap={16} />
           <Controls />
         </ReactFlow>
       </div>

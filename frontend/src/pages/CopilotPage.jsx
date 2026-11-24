@@ -3,6 +3,7 @@
 // Mobile: single column, citation chips open bottom sheet, 44px tap targets.
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
+import { AlertTriangle, Bot, ThumbsDown, ThumbsUp } from 'lucide-react';
 import {
   createConversation,
   sendMessage,
@@ -76,18 +77,18 @@ function CitationChip({ citation, onClick, isActive }) {
         borderRadius: 4,
         border: '1px solid var(--border)',
         background: isActive ? 'var(--teal)' : 'var(--panel)',
-        color: isActive ? '#fff' : 'var(--text-primary)',
+        color: isActive ? 'var(--on-accent)' : 'var(--text-primary)',
         cursor: 'pointer',
         fontSize: 12,
         fontFamily: 'var(--font-mono)',
         fontWeight: 600,
-        transition: 'all 0.15s',
+        transition: 'background-color 0.15s, color 0.15s',
         minHeight: 28,
       }}
     >
       <span>{citation.citation_id}</span>
       {citation.provenance === 'synthetic_demo' && (
-        <span style={{ color: isActive ? '#fff' : 'var(--amber)', fontSize: 10 }}>⚠</span>
+        <AlertTriangle size={11} style={{ color: isActive ? 'var(--on-accent)' : 'var(--amber)' }} aria-label="Synthetic demo data" />
       )}
     </button>
   );
@@ -95,9 +96,9 @@ function CitationChip({ citation, onClick, isActive }) {
 
 function StatusBanner({ status, label, confidence }) {
   const cfg = {
-    supported: { bg: '#DCFCE7', color: '#177245', icon: '✓', text: 'Supported by evidence' },
-    insufficient_evidence: { bg: '#FEE2E2', color: '#B42318', icon: '○', text: 'Insufficient Evidence' },
-    safety_boundary: { bg: '#FEF9C3', color: '#B45309', icon: '⚠', text: 'Outside scope — read-only system' },
+    supported: { bg: 'var(--verified-bg)', color: 'var(--green)', icon: '✓', text: 'Supported by evidence' },
+    insufficient_evidence: { bg: 'var(--unreadable-bg)', color: 'var(--red)', icon: '○', text: 'Insufficient Evidence' },
+    safety_boundary: { bg: 'var(--pending-bg)', color: 'var(--amber)', icon: <AlertTriangle size={12} aria-hidden="true" />, text: 'Outside scope: read-only system' },
   };
   const c = cfg[status] || cfg.supported;
   const sup = label ? SUPPORT_LABELS[label] : null;
@@ -118,7 +119,7 @@ function StatusBanner({ status, label, confidence }) {
       <span>{sup ? sup.label : c.text}</span>
       {confidence?.evidence_count > 0 && (
         <span style={{ fontWeight: 400, opacity: 0.8 }}>
-          · {confidence.evidence_count} source{confidence.evidence_count !== 1 ? 's' : ''}
+          {confidence.evidence_count} source{confidence.evidence_count !== 1 ? 's' : ''}
         </span>
       )}
     </div>
@@ -128,7 +129,7 @@ function StatusBanner({ status, label, confidence }) {
 function ServiceStatusBar({ status }) {
   if (!status) return null;
   const items = [
-    { key: 'ollama', label: 'LLM', ok: status.ollama?.available },
+    { key: 'llm', label: 'LLM', ok: status.llm?.available },
     { key: 'qdrant', label: 'Vector', ok: status.qdrant?.available },
     { key: 'neo4j', label: 'Graph', ok: status.neo4j?.available },
     { key: 'mongo', label: 'MongoDB', ok: status.mongodb?.available },
@@ -142,18 +143,18 @@ function ServiceStatusBar({ status }) {
       gap: 8,
       flexWrap: 'wrap',
       padding: '6px 16px',
-      background: '#FEF9C3',
+      background: 'var(--pending-bg)',
       borderBottom: '1px solid var(--border)',
       fontSize: 12,
     }}>
-      <span style={{ color: 'var(--amber)', fontWeight: 600 }}>⚠ Service status:</span>
+      <span style={{ color: 'var(--amber)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 4 }}><AlertTriangle size={12} aria-hidden="true" />Service status:</span>
       {items.map(it => (
         <span key={it.key} style={{ color: it.ok ? 'var(--green)' : 'var(--amber)' }}>
           {it.ok ? '✓' : '✗'} {it.label}
         </span>
       ))}
       {!status.mongodb?.chunk_count && (
-        <span style={{ color: 'var(--red)' }}>· Corpus not indexed — click "Index Now"</span>
+        <span style={{ color: 'var(--red)' }}>Corpus not indexed. Click “Index Now”.</span>
       )}
     </div>
   );
@@ -173,7 +174,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
           padding: '10px 14px',
           borderRadius: '14px 14px 4px 14px',
           background: 'var(--teal)',
-          color: '#fff',
+          color: 'var(--on-accent)',
           fontSize: 14,
           lineHeight: '20px',
         }}>
@@ -197,7 +198,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
           height: 28,
           borderRadius: '50%',
           background: 'var(--teal)',
-          color: '#fff',
+          color: 'var(--on-accent)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -223,7 +224,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
           {msg.citations?.some(c => c.provenance === 'synthetic_demo') && (
             <div style={{
               padding: '6px 10px',
-              background: '#FEF9C3',
+              background: 'var(--pending-bg)',
               borderLeft: '3px solid var(--amber)',
               borderRadius: '0 4px 4px 0',
               fontSize: 12,
@@ -231,7 +232,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
               marginBottom: 8,
               fontWeight: 600,
             }}>
-              ⚠ Some citations are Synthetic Demo Data — not real plant evidence
+              <AlertTriangle size={12} aria-hidden="true" style={{ verticalAlign: '-2px', marginRight: 4 }} />Some citations are Synthetic Demo Data, not real plant evidence
             </div>
           )}
 
@@ -285,12 +286,12 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
           {/* Details toggle */}
           <div style={{ marginTop: 6, display: 'flex', gap: 12, alignItems: 'center' }}>
             {msg.latency_ms > 0 && (
-              <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-                {msg.latency_ms}ms
-                {msg.retrieval_info?.ollama_used && ' · LLM'}
-                {msg.retrieval_info?.used_qdrant && ' · Vector'}
-                {msg.retrieval_info?.used_graph && ' · Graph'}
-                {msg.retrieval_info?.used_mongo_fallback && ' · Keyword fallback'}
+              <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', gap: 8 }}>
+                <span>{msg.latency_ms}ms</span>
+                {msg.retrieval_info?.llm_used && <span>LLM</span>}
+                {msg.retrieval_info?.used_qdrant && <span>Vector</span>}
+                {msg.retrieval_info?.used_graph && <span>Graph</span>}
+                {msg.retrieval_info?.used_mongo_fallback && <span>Keyword fallback</span>}
               </span>
             )}
             <button
@@ -310,14 +311,16 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
               <>
                 <button
                   onClick={() => onFeedback(msg.message_id, 'helpful')}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13 }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', display: 'inline-flex', minWidth: 24, minHeight: 24, alignItems: 'center', justifyContent: 'center' }}
                   title="Helpful"
-                >👍</button>
+                  aria-label="Helpful"
+                ><ThumbsUp size={14} aria-hidden="true" /></button>
                 <button
                   onClick={() => onFeedback(msg.message_id, 'not_helpful')}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13 }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', display: 'inline-flex', minWidth: 24, minHeight: 24, alignItems: 'center', justifyContent: 'center' }}
                   title="Not helpful"
-                >👎</button>
+                  aria-label="Not helpful"
+                ><ThumbsDown size={14} aria-hidden="true" /></button>
               </>
             )}
           </div>
@@ -327,7 +330,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
             <div style={{
               marginTop: 8,
               padding: '10px 12px',
-              background: '#F7F9FB',
+              background: 'var(--surface)',
               border: '1px solid var(--border)',
               borderRadius: 4,
               fontSize: 12,
@@ -338,7 +341,7 @@ function MessageBubble({ msg, onSelectCitation, selectedCitation, onFeedback }) 
               <div>Vector search: {msg.retrieval_info.used_qdrant ? '✓' : '✗ (unavailable or no results)'}</div>
               <div>Graph traversal: {msg.retrieval_info.used_graph ? '✓' : '✗'}</div>
               <div>Keyword fallback: {msg.retrieval_info.used_mongo_fallback ? '✓' : '✗'}</div>
-              <div>LLM generation: {msg.retrieval_info.ollama_used ? '✓' : '✗ (Ollama unavailable)'}</div>
+              <div>LLM generation: {msg.retrieval_info.llm_used ? '✓' : '✗ (OpenAI unavailable)'}</div>
             </div>
           )}
         </div>
@@ -413,7 +416,7 @@ function EvidenceDrawer({ citation, onClose }) {
 
       <div style={{
         padding: '10px 12px',
-        background: '#F7F9FB',
+        background: 'var(--surface)',
         border: '1px solid var(--border)',
         borderRadius: 4,
         fontSize: 13,
@@ -434,7 +437,7 @@ function EvidenceDrawer({ citation, onClose }) {
             display: 'block',
             padding: '8px 14px',
             background: 'var(--teal)',
-            color: '#fff',
+            color: 'var(--on-accent)',
             borderRadius: 4,
             textDecoration: 'none',
             fontSize: 13,
@@ -444,12 +447,13 @@ function EvidenceDrawer({ citation, onClose }) {
             lineHeight: '26px',
           }}
         >
-          Open source →
+          Open source
         </Link>
       )}
 
       <div style={{ marginTop: 12, fontSize: 11, color: 'var(--text-muted)' }}>
-        Score: {citation.score} · Source: {citation.source_id}
+        <div>Score: {citation.score}</div>
+        <div>Source: {citation.source_id}</div>
       </div>
     </div>
   );
@@ -517,7 +521,7 @@ function AssetContextPanel({ tag }) {
                 minHeight: 36,
                 lineHeight: '22px',
               }}
-            >Asset 360 →</Link>
+            >Open Asset 360</Link>
             {asset.drawing_id && (
               <Link
                 to={`/drawings?id=${asset.drawing_id}`}
@@ -533,7 +537,7 @@ function AssetContextPanel({ tag }) {
                   minHeight: 36,
                   lineHeight: '22px',
                 }}
-              >View P&ID →</Link>
+              >View P&ID</Link>
             )}
           </div>
         </>
@@ -700,9 +704,9 @@ export default function CopilotPage() {
         flexWrap: 'wrap',
       }}>
         <div>
-          <h1 style={{ margin: 0, fontSize: 16, fontWeight: 650 }}>⚗️ Expert Knowledge Copilot</h1>
+          <h1 style={{ margin: 0, fontSize: 16, fontWeight: 650 }}>Expert Knowledge Copilot</h1>
           <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>
-            Ask plant questions · Inspect source evidence · Honest abstention
+            Ask plant questions and inspect the source evidence behind each answer.
           </div>
         </div>
         <div style={{ marginLeft: 'auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
@@ -771,7 +775,7 @@ export default function CopilotPage() {
         <div style={{
           padding: '8px 20px',
           borderBottom: '1px solid var(--border)',
-          background: '#F7F9FB',
+          background: 'var(--surface)',
           display: 'flex',
           gap: 16,
           fontSize: 13,
@@ -831,7 +835,7 @@ export default function CopilotPage() {
                 padding: 24,
               }}>
                 <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: 32, marginBottom: 8 }}>⚗️</div>
+                  <Bot size={32} aria-hidden="true" style={{ color: 'var(--teal)', marginBottom: 8 }} />
                   <h2 style={{ margin: '0 0 8px', fontSize: 18 }}>Pragyan Knowledge Copilot</h2>
                   <p style={{ color: 'var(--text-muted)', fontSize: 13, maxWidth: 460 }}>
                     Ask a plant engineering question. Answers are grounded in source evidence from P&IDs,
@@ -841,7 +845,7 @@ export default function CopilotPage() {
 
                 <div style={{ width: '100%', maxWidth: 520 }}>
                   <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--text-muted)', marginBottom: 8 }}>
-                    SUPPORTED QUESTIONS
+                    Supported questions
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                     {EXAMPLE_QUESTIONS.map(q => (
@@ -867,7 +871,7 @@ export default function CopilotPage() {
 
                 <div style={{ width: '100%', maxWidth: 520 }}>
                   <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--text-muted)', marginBottom: 8 }}>
-                    SAFETY BOUNDARY (try these to see abstention)
+                    Safety boundary (try these to see abstention)
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                     {SAFETY_BOUNDARY_QUESTIONS.map(q => (
@@ -879,7 +883,7 @@ export default function CopilotPage() {
                           padding: '8px 12px',
                           border: '1px solid var(--amber)',
                           borderRadius: 6,
-                          background: '#FEF9C3',
+                          background: 'var(--pending-bg)',
                           cursor: 'pointer',
                           fontSize: 13,
                           color: 'var(--amber)',
@@ -960,7 +964,7 @@ export default function CopilotPage() {
                   fontSize: 14,
                   resize: 'none',
                   lineHeight: '20px',
-                  background: isLoading ? '#F7F9FB' : 'var(--panel)',
+                  background: isLoading ? 'var(--surface)' : 'var(--panel)',
                 }}
                 aria-label="Ask a plant knowledge question"
                 id="copilot-input"
@@ -972,7 +976,7 @@ export default function CopilotPage() {
                   padding: '10px 18px',
                   borderRadius: 6,
                   background: 'var(--teal)',
-                  color: '#fff',
+                  color: 'var(--on-accent)',
                   border: 'none',
                   cursor: 'pointer',
                   fontSize: 14,
@@ -986,7 +990,7 @@ export default function CopilotPage() {
               >Send</button>
             </div>
             <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 6 }}>
-              Source-grounded only · Abstains when evidence is insufficient · Not a plant control system
+              Answers come only from indexed sources and abstain when evidence is insufficient. Not a plant control system.
             </div>
           </div>
         </div>

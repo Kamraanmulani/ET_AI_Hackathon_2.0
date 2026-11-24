@@ -111,11 +111,11 @@ function DrawingCanvas({ drawing }) {
 
       {/* Legend */}
       <div className="pid-legend">
-        <div style={{ marginBottom: 4, fontWeight: 600, fontSize: 11 }}>LEGEND</div>
+        <div style={{ marginBottom: 4, fontWeight: 600, fontSize: 12 }}>Legend</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11 }}>
           <span style={{
             display: 'inline-block', width: 28, height: 14,
-            background: 'rgba(8,126,139,0.15)', border: '1px solid #087E8B', borderRadius: 2
+            background: 'var(--teal-wash)', border: '1px solid var(--teal)', borderRadius: 2
           }} />
           Tag overlay
         </div>
@@ -177,14 +177,14 @@ export default function DrawingsPage() {
         <div className="page-title-row">
           <h1>P&amp;ID Explorer</h1>
           <span className="text-muted" style={{ fontSize: 14 }}>
-            Original source drawings — unmodified
+            Original source drawings, unmodified
           </span>
         </div>
       </div>
 
       <p className="text-muted text-small" style={{ marginBottom: 16 }}>
         Click a tag overlay to open Asset 360. Overlay positions are manually estimated
-        (~ approximate) — not extracted from the drawing.
+        (~ approximate), not extracted from the drawing.
       </p>
 
       <div className="pid-explorer">

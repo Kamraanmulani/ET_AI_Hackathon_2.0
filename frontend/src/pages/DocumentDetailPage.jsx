@@ -37,7 +37,7 @@ export default function DocumentDetailPage() {
     return (
       <div>
         <button className="btn btn-outline" onClick={() => navigate('/catalogue')} style={{ marginBottom: 20 }}>
-          <ChevronLeft className="w-4 h-4 inline mr-1" /> Back to Catalogue
+          <ChevronLeft size={16} className="icon-inline" aria-hidden="true" /> Back to Catalogue
         </button>
         <div className="error-box">
           Document not found or error loading data.
@@ -52,7 +52,7 @@ export default function DocumentDetailPage() {
     <div>
       <div style={{ marginBottom: 20 }}>
         <button className="link-btn" onClick={() => navigate('/catalogue')} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-          <ChevronLeft className="w-4 h-4" /> Back to Catalogue
+          <ChevronLeft size={16} aria-hidden="true" /> Back to Catalogue
         </button>
       </div>
 
@@ -81,17 +81,17 @@ export default function DocumentDetailPage() {
               {doc.asset_tags.map(tag => (
                 <span 
                   key={tag} 
-                  className="badge badge-neutral" 
-                  style={{ cursor: 'pointer', border: '1px solid #d1d5db', padding: '4px 8px' }}
+                  className="badge badge-neutral badge-clickable"
+                  style={{ padding: '4px 8px' }}
                   onClick={() => navigate(`/assets/${tag}`)}
                 >
-                  <Box className="w-4 h-4 inline mr-2 opacity-60" />
+                  <Box size={16} className="icon-inline" aria-hidden="true" />
                   {tag}
                 </span>
               ))}
             </div>
           ) : (
-            <div className="text-muted">—</div>
+            <div className="text-muted">None</div>
           )}
         </div>
         
@@ -114,11 +114,11 @@ export default function DocumentDetailPage() {
                     <td>
                       {ent.resolution?.state === 'verified' ? (
                         <span style={{ color: 'var(--green)', fontSize: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
-                          <CheckCircle className="w-3 h-3" /> Verified
+                          <CheckCircle size={12} aria-hidden="true" /> Verified
                         </span>
                       ) : (
                         <span style={{ color: 'var(--amber)', fontSize: 12, display: 'flex', alignItems: 'center', gap: 4 }}>
-                          <AlertTriangle className="w-3 h-3" /> {ent.resolution?.state || 'pending'}
+                          <AlertTriangle size={12} aria-hidden="true" /> {ent.resolution?.state || 'pending'}
                         </span>
                       )}
                     </td>
