@@ -52,7 +52,7 @@ Neo4j provides efficient graph traversal and visualisation, while MongoDB remain
 
 ### Expert Knowledge Copilot
 
-The **Expert Knowledge Copilot** is a local, evidence-grounded RAG workflow for operational, maintenance, and engineering information discovery.
+The **Expert Knowledge Copilot** is an evidence-grounded RAG workflow for operational, maintenance, and engineering information discovery.
 
 - Accepts natural-language questions with optional asset context.
 - Uses exact asset/document matching, graph expansion, vector retrieval, and MongoDB fallback.
@@ -109,7 +109,7 @@ flowchart TB
     subgraph Experience["Pragyan Workspace"]
         API["FastAPI\nsource, asset, graph, review, and Copilot APIs"]
         UI["React\nLanding page, P&ID Explorer, Asset 360,\nCatalogue, Review Queue, Copilot"]
-        OLLAMA["Local Ollama\nqwen2.5:1.5b + mxbai-embed-large"]
+        LLM["OpenAI API\ngpt-4.1-mini + text-embedding-3-small"]
     end
 
     PID --> ROUTER
@@ -134,8 +134,8 @@ flowchart TB
     QDRANT --> API
     NEO4J --> API
     API --> UI
-    API --> OLLAMA
-    OLLAMA --> API
+    API --> LLM
+    LLM --> API
 ```
 
 ### Trust Model
@@ -143,12 +143,12 @@ flowchart TB
 1. **MongoDB is canonical.** Documents, evidence, review decisions, and audit history are authoritative here.
 2. **Qdrant is derived.** It accelerates semantic retrieval but does not own source truth.
 3. **Neo4j is derived.** It accelerates evidence-graph traversal but does not decide whether a relationship is true.
-4. **Ollama is constrained.** It receives a selected local evidence pack and must produce cited output or abstain.
+4. **The LLM is constrained.** The OpenAI chat model receives only a selected evidence pack and must produce cited output or abstain.
 5. **The engineer remains in control.** Uncertain evidence is routed to review rather than promoted automatically.
 
-## Open-Source, Local-First Technology Stack
+## Technology Stack
 
-All plant data, OCR artifacts, vector embeddings, graph data, and Copilot processing stay on the local development machine.
+Plant data, OCR artifacts, vector embeddings, and graph data are stored on the local development machine. Embedding and answer generation use the OpenAI API, so evidence excerpts and user questions are sent to OpenAI.
 
 | Layer | Technology | Role |
 | --- | --- | --- |
@@ -160,9 +160,9 @@ All plant data, OCR artifacts, vector embeddings, graph data, and Copilot proces
 | Graph database | Neo4j Community | Local Asset Evidence Graph projection and traversal |
 | OCR | PaddleOCR, OpenCV | Scanned work-order text, regions, and extraction confidence |
 | Document parsing | PyMuPDF, OpenPyXL | PDF text/page extraction and structured spreadsheet ingestion |
-| Local LLM runtime | Ollama | Runs models locally without a cloud API key |
-| Chat model | `qwen2.5:1.5b` | Concise evidence-grounded answer generation |
-| Embedding model | `mxbai-embed-large` | Local vector embeddings for Qdrant |
+| LLM provider | OpenAI API | Chat generation and embeddings (requires `OPENAI_API_KEY`) |
+| Chat model | `gpt-4.1-mini` (set via `OPENAI_CHAT_MODEL`) | Concise evidence-grounded answer generation |
+| Embedding model | `text-embedding-3-small` (1024 dimensions) | Vector embeddings for Qdrant |
 | Local infrastructure | Docker Compose | Starts Qdrant and Neo4j with persistent volumes |
 | Testing | Pytest, Vitest, Testing Library | Backend, frontend, and workflow regression coverage |
 
@@ -196,7 +196,7 @@ All plant data, OCR artifacts, vector embeddings, graph data, and Copilot proces
 - Windows with Node.js 18+ and Python 3.10+
 - MongoDB Community Edition running locally
 - Docker Desktop
-- Ollama
+- An OpenAI API key
 
 ### 1. Start local vector and graph services
 
@@ -204,11 +204,14 @@ All plant data, OCR artifacts, vector embeddings, graph data, and Copilot proces
 docker compose -f infra/rag-compose.yml up -d
 ```
 
-### 2. Prepare local Ollama models
+### 2. Configure OpenAI
+
+Set `OPENAI_API_KEY` in `backend/.env`. Optionally override `OPENAI_CHAT_MODEL` and `OPENAI_EMBEDDING_MODEL`.
+
+After the first import, or after changing the embedding model, rebuild the vector index:
 
 ```powershell
-ollama pull qwen2.5:1.5b
-ollama pull mxbai-embed-large
+backend\.venv-api\Scripts\python.exe tools\run_indexer.py --force
 ```
 
 ### 3. Configure and start the backend

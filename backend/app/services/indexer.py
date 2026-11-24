@@ -23,12 +23,12 @@ from app.core.database import get_db
 from app.models.chunk import DocumentChunkRecord, IndexJobRecord
 from app.services.chunker import build_all_chunks
 from app.services import qdrant_service, neo4j_service
-from app.services.ollama_client import embed, OllamaUnavailableError
+from app.services.llm_client import embed, LLMUnavailableError
 
 log = structlog.get_logger(__name__)
 
 CHUNK_VERSION = 1  # Bump to force re-embed all chunks
-EMBEDDING_MODEL = "mxbai-embed-large"
+EMBEDDING_MODEL = settings.openai_embedding_model
 
 
 def _already_indexed(db, chunk: DocumentChunkRecord) -> bool:
@@ -132,10 +132,10 @@ def run_full_index(force: bool = False) -> dict:
                 else:
                     failed += 1
                     errors.append(f"Qdrant upsert failed: {chunk.chunk_id}")
-            except OllamaUnavailableError as e:
-                log.warning("ollama_embed_failed", chunk_id=chunk.chunk_id, error=str(e))
+            except LLMUnavailableError as e:
+                log.warning("llm_embed_failed", chunk_id=chunk.chunk_id, error=str(e))
                 failed += 1
-                errors.append(f"Ollama unavailable: {chunk.chunk_id}")
+                errors.append(f"OpenAI embedding unavailable: {chunk.chunk_id}")
                 # Don't abort — try next chunk
         else:
             indexed += 1  # count as done if vector disabled

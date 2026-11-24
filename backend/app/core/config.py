@@ -28,12 +28,14 @@ class Settings(BaseSettings):
     manifests_root: str = "../Data/manifests"
     derived_ocr_root: str = "../Data/derived/ocr"
 
-    # ── Ollama (native Windows host) ─────────────────────────────────────────
-    ollama_base_url: str = "http://localhost:11434"
-    ollama_chat_model: str = "qwen3:8b"
-    ollama_embedding_model: str = "mxbai-embed-large"
-    ollama_temperature: float = 0.1
-    ollama_context_window: int = 4096
+    # ── OpenAI (chat + embeddings) ───────────────────────────────────────────
+    openai_api_key: str = ""
+    openai_base_url: str = "https://api.openai.com/v1"
+    openai_chat_model: str = "gpt-4.1-mini"
+    openai_embedding_model: str = "text-embedding-3-small"
+    # Must equal qdrant_vector_size; text-embedding-3 models support reduced dimensions.
+    openai_embedding_dimensions: int = 1024
+    openai_temperature: float = 0.1
 
     # ── Qdrant (Docker) ──────────────────────────────────────────────────────
     qdrant_url: str = "http://localhost:6333"

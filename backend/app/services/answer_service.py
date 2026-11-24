@@ -5,7 +5,7 @@ Implements:
 1. Safety and intent gate (reject prohibited requests before any retrieval)
 2. Evidence pack builder
 3. Constrained system prompt
-4. Ollama qwen3:8b answer generation
+4. OpenAI chat-model answer generation
 5. Post-generation citation verification
 6. Abstention handler
 
@@ -21,7 +21,7 @@ from typing import Any
 import structlog
 
 from app.core.config import settings
-from app.services.ollama_client import generate, OllamaUnavailableError
+from app.services.llm_client import generate, LLMUnavailableError
 
 log = structlog.get_logger(__name__)
 
@@ -206,8 +206,8 @@ def generate_answer(
     retrieval_info: dict,
 ) -> dict:
     """
-    Generate a grounded answer from the evidence pack using Ollama.
-    Falls back to Insufficient Evidence if Ollama is unavailable or verification fails.
+    Generate a grounded answer from the evidence pack using the OpenAI chat model.
+    Falls back to Insufficient Evidence if the OpenAI API is unavailable or verification fails.
     """
     citations = _build_citations(evidence_pack)
     request_id = str(uuid.uuid4())
@@ -239,7 +239,7 @@ def generate_answer(
 
     # ── Attempt LLM generation ────────────────────────────────────────────────
     answer_text = None
-    ollama_used = False
+    llm_used = False
 
     try:
         t0 = time.monotonic()
@@ -250,10 +250,10 @@ def generate_answer(
             max_tokens=400,
         )
         latency_ms = (time.monotonic() - t0) * 1000
-        ollama_used = True
+        llm_used = True
         log.info("llm_generated", latency_ms=round(latency_ms), length=len(answer_text))
-    except OllamaUnavailableError as e:
-        log.warning("ollama_unavailable_falling_back_to_evidence_list", error=str(e))
+    except LLMUnavailableError as e:
+        log.warning("llm_unavailable_falling_back_to_evidence_list", error=str(e))
 
     # ── Post-generation verification ──────────────────────────────────────────
     if answer_text:
@@ -284,9 +284,9 @@ def generate_answer(
         answer_status = "supported"
 
     else:
-        # Ollama unavailable — return evidence list with note
+        # LLM unavailable — return evidence list with note
         answer_text = (
-            "Semantic answer generation is currently unavailable (Ollama not reachable). "
+            "Semantic answer generation is currently unavailable (OpenAI API not reachable). "
             "The following evidence was retrieved from the corpus — please review citations directly."
         )
         support_label = "partial_support"
@@ -308,7 +308,7 @@ def generate_answer(
             "used_qdrant": retrieval_info.get("used_qdrant", False),
             "used_graph": retrieval_info.get("used_graph", False),
             "used_mongo_fallback": retrieval_info.get("used_mongo_fallback", False),
-            "ollama_used": ollama_used,
+            "llm_used": llm_used,
             "tags_found": tags_found,
         },
         "request_id": request_id,

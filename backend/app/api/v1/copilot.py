@@ -25,7 +25,7 @@ from app.core.database import get_db
 from app.core.config import settings
 from app.services import answer_service, retrieval_service
 from app.services import qdrant_service, neo4j_service
-from app.services.ollama_client import health_check as ollama_health
+from app.services.llm_client import health_check as llm_health
 
 log = structlog.get_logger(__name__)
 router = APIRouter(tags=["copilot"])
@@ -259,10 +259,11 @@ def copilot_status():
     indexed_count = db.document_chunks.count_documents({"indexed_at": {"$ne": None}})
 
     return {
-        "ollama": {
-            "available": ollama_health(),
-            "chat_model": settings.qdrant_collection and settings.ollama_chat_model,
-            "embedding_model": settings.ollama_embedding_model,
+        "llm": {
+            "provider": "openai",
+            "available": llm_health(),
+            "chat_model": settings.openai_chat_model,
+            "embedding_model": settings.openai_embedding_model,
         },
         "qdrant": qdrant_service.get_collection_info(),
         "neo4j": {"available": neo4j_service.health_check()},

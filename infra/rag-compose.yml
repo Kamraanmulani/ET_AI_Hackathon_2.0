@@ -1,6 +1,6 @@
 # infra/rag-compose.yml
 # Qdrant (vector store) and Neo4j (graph projection) for Pragyan RAG Copilot.
-# Ollama runs NATIVELY on the Windows host — do NOT add it here.
+# LLM and embeddings are served by the OpenAI API (see backend/.env).
 #
 # Startup:
 #   docker compose -f infra/rag-compose.yml up -d

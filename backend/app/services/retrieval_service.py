@@ -22,7 +22,7 @@ import structlog
 
 from app.core.config import settings
 from app.services import qdrant_service, neo4j_service
-from app.services.ollama_client import embed, OllamaUnavailableError
+from app.services.llm_client import embed, LLMUnavailableError
 
 log = structlog.get_logger(__name__)
 
@@ -229,8 +229,8 @@ def retrieve(
             for r in raw_results:
                 qdrant_chunks.append(_normalize_chunk(r, score=r.get("qdrant_score", 0.0), source="qdrant"))
             used_qdrant = True
-        except OllamaUnavailableError:
-            log.warning("retrieval_ollama_unavailable_falling_back_to_mongo")
+        except LLMUnavailableError:
+            log.warning("retrieval_llm_unavailable_falling_back_to_mongo")
             used_qdrant = False
 
     latency["qdrant_ms"] = (time.monotonic() - t0) * 1000

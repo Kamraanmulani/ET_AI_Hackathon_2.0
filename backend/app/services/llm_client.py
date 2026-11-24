@@ -1,76 +1,79 @@
 """
-app/services/ollama_client.py — Local Ollama HTTP client for embeddings and chat.
+app/services/llm_client.py — OpenAI client for embeddings and chat generation.
 
-Uses httpx for async-ready HTTP. Runs against Ollama at localhost:11434 on Windows host.
-Never sends data externally. Falls back gracefully when Ollama is unavailable.
+Embeddings use an OpenAI text-embedding-3 model, reduced to
+settings.openai_embedding_dimensions (1024 by default) so vectors match the
+Qdrant collection size. Chat generation uses settings.openai_chat_model.
+
+Every failure (missing key, network error, API error) is raised as
+LLMUnavailableError so callers can fall back gracefully.
 """
 from __future__ import annotations
 
-import json
 import time
-from typing import Any
+from functools import lru_cache
 
-import httpx
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+import openai
+from openai import OpenAI
 
 from app.core.config import settings
 
 import structlog
 log = structlog.get_logger(__name__)
 
-_TIMEOUT = httpx.Timeout(connect=5.0, read=120.0, write=30.0, pool=5.0)
+_TIMEOUT_SECONDS = 60.0
+_HEALTH_TTL_SECONDS = 60.0
+_health_cache: dict[str, float | bool] = {"checked_at": 0.0, "ok": False}
 
 
-class OllamaUnavailableError(Exception):
-    """Raised when Ollama is not reachable or no model is loaded."""
+class LLMUnavailableError(Exception):
+    """Raised when the OpenAI API is not configured, not reachable, or returns an error."""
 
 
-def _client() -> httpx.Client:
-    return httpx.Client(base_url=settings.ollama_base_url, timeout=_TIMEOUT)
+@lru_cache(maxsize=1)
+def _client() -> OpenAI:
+    if not settings.openai_api_key:
+        raise LLMUnavailableError("OPENAI_API_KEY is not set in backend/.env")
+    return OpenAI(
+        api_key=settings.openai_api_key,
+        base_url=settings.openai_base_url or None,
+        timeout=_TIMEOUT_SECONDS,
+        max_retries=2,
+    )
 
 
 def health_check() -> bool:
-    """Return True if Ollama is running and reachable."""
+    """Return True if the OpenAI API key is set and the API is reachable (cached for 60 s)."""
+    now = time.monotonic()
+    if now - float(_health_cache["checked_at"]) < _HEALTH_TTL_SECONDS:
+        return bool(_health_cache["ok"])
     try:
-        with _client() as c:
-            r = c.get("/api/tags", timeout=3.0)
-            return r.status_code == 200
-    except Exception:
-        return False
+        _client().models.retrieve(settings.openai_chat_model, timeout=5.0)
+        ok = True
+    except Exception as e:
+        log.warning("openai_health_check_failed", error=str(e))
+        ok = False
+    _health_cache.update(checked_at=now, ok=ok)
+    return ok
 
 
-@retry(
-    stop=stop_after_attempt(2),
-    wait=wait_exponential(multiplier=1, min=1, max=4),
-    retry=retry_if_exception_type((httpx.ConnectError, httpx.TimeoutException)),
-    reraise=True,
-)
 def embed(text: str) -> list[float]:
     """
-    Generate an embedding vector using mxbai-embed-large via Ollama.
-    Returns a list of floats (1024 dimensions for mxbai-embed-large).
-    Raises OllamaUnavailableError if Ollama is down.
+    Generate an embedding vector with the configured OpenAI embedding model.
+    Returns settings.openai_embedding_dimensions floats.
+    Raises LLMUnavailableError on any failure.
     """
     try:
-        with _client() as c:
-            payload = {
-                "model": settings.ollama_embedding_model,
-                "input": text,
-            }
-            r = c.post("/api/embed", json=payload)
-            r.raise_for_status()
-            data = r.json()
-            # Ollama /api/embed returns {"embeddings": [[...]], ...}
-            embeddings = data.get("embeddings") or data.get("embedding")
-            if not embeddings:
-                raise OllamaUnavailableError("Empty embedding response from Ollama")
-            # Handle both [[...]] and [...] shapes
-            vec = embeddings[0] if isinstance(embeddings[0], list) else embeddings
-            return vec
-    except (httpx.ConnectError, httpx.TimeoutException) as e:
-        raise OllamaUnavailableError(f"Ollama unreachable: {e}") from e
-    except httpx.HTTPStatusError as e:
-        raise OllamaUnavailableError(f"Ollama embed error {e.response.status_code}: {e.response.text}") from e
+        resp = _client().embeddings.create(
+            model=settings.openai_embedding_model,
+            input=text,
+            dimensions=settings.openai_embedding_dimensions,
+        )
+    except openai.OpenAIError as e:
+        raise LLMUnavailableError(f"OpenAI embedding failed: {e}") from e
+    if not resp.data:
+        raise LLMUnavailableError("Empty embedding response from OpenAI")
+    return list(resp.data[0].embedding)
 
 
 def generate(
@@ -80,12 +83,11 @@ def generate(
     max_tokens: int = 512,
 ) -> str:
     """
-    Generate an answer from the evidence pack using qwen3:8b via Ollama.
+    Generate an answer from the evidence pack with the configured OpenAI chat model.
 
     The evidence pack is injected into the system context — NOT the whole document.
-    Temperature is set low (0.1) for factual grounding.
-    Returns the generated text string.
-    Raises OllamaUnavailableError if Ollama is down.
+    Temperature is kept low for factual grounding.
+    Raises LLMUnavailableError on any failure.
     """
     # Build evidence context string (compact, not full documents)
     evidence_lines = []
@@ -109,25 +111,17 @@ def generate(
     )
 
     try:
-        with _client() as c:
-            payload = {
-                "model": settings.ollama_chat_model,
-                "messages": [
-                    {"role": "system", "content": full_system},
-                    {"role": "user", "content": user_message},
-                ],
-                "stream": False,
-                "options": {
-                    "temperature": settings.ollama_temperature,
-                    "num_predict": max_tokens,
-                    "num_ctx": settings.ollama_context_window,
-                },
-            }
-            r = c.post("/api/chat", json=payload)
-            r.raise_for_status()
-            data = r.json()
-            return data.get("message", {}).get("content", "").strip()
-    except (httpx.ConnectError, httpx.TimeoutException) as e:
-        raise OllamaUnavailableError(f"Ollama unreachable during generation: {e}") from e
-    except httpx.HTTPStatusError as e:
-        raise OllamaUnavailableError(f"Ollama chat error {e.response.status_code}: {e.response.text}") from e
+        resp = _client().chat.completions.create(
+            model=settings.openai_chat_model,
+            messages=[
+                {"role": "system", "content": full_system},
+                {"role": "user", "content": user_message},
+            ],
+            temperature=settings.openai_temperature,
+            max_completion_tokens=max_tokens,
+        )
+    except openai.OpenAIError as e:
+        raise LLMUnavailableError(f"OpenAI chat generation failed: {e}") from e
+    if not resp.choices:
+        raise LLMUnavailableError("Empty chat response from OpenAI")
+    return (resp.choices[0].message.content or "").strip()

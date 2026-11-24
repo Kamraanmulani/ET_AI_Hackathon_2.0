@@ -9,7 +9,7 @@ Or from project root:
 
 The indexer:
 1. Reads all eligible chunks from MongoDB
-2. Embeds via Ollama mxbai-embed-large
+2. Embeds via the OpenAI embedding model (OPENAI_EMBEDDING_MODEL)
 3. Upserts to Qdrant with deterministic point IDs
 4. Projects asset/chunk nodes and edges to Neo4j
 5. Skips unchanged chunks (idempotent by source_hash + chunk_version)
